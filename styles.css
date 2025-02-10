@@ -1,0 +1,672 @@
+/* ==========================
+   Algemene Stijlen
+   ========================== */
+   body {
+    background: linear-gradient(to right, #729fff, #fcd874);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fefefe;
+}
+
+h1, h2, h3 {
+    color: #050000;
+}
+
+/* ==========================
+   Navigatie & Taalkeuze
+   ========================== */
+.language-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Half-transparante achtergrond */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav select {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem; /* Aangepast naar rem voor schaalbaarheid */
+    cursor: pointer;
+}
+/* ==========================
+   Header
+   ========================== */
+   header {
+    position: relative;
+    height: 35vh;
+    background-image: url('omgeving/57198.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(246, 247, 248);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(11, 205, 141);
+    z-index: 1;  /* Zet het logo onder het menu */
+}
+
+/* Knop voor het menu in de rechterbovenhoek */
+.menu-toggle {
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;  /* Afstand van bovenkant van de header */
+    right: 20px; /* Afstand van de rechterkant van de header */
+    z-index: 10;  /* Zorgt ervoor dat de knop bovenop de afbeelding staat */
+}
+
+/* ==========================
+   Navigatie Menu
+   ========================== */
+
+/* Navigatie menu is standaard verborgen */
+
+/* Sluitknop stijlen */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 25;
+}
+
+.close-btn:hover {
+    color: #ff7043; /* Kleur bij hover */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Buiten het zicht aan de linkerkant */
+    width: 250px; /* Breedte van het schuifmenu */
+    height: 100%; /* Volledige hoogte van het scherm */
+    background-color: #333; /* Donkere achtergrond voor het menu */
+    transition: left 0.3s ease-in-out; /* Soepele overgang voor het schuiven */
+    z-index: 20; /* Zet het menu bovenop het logo en andere elementen */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ff7043; /* Oranje kleur bij hover */
+}
+
+/* Menu zichtbaar wanneer geactiveerd */
+.navbar.active {
+    left: 0; /* Menu schuift in zicht */
+}
+
+/* ==========================
+   Responsief voor Mobiel
+   ========================== */
+
+/* Zorg ervoor dat het hamburger menu goed zichtbaar is op mobiel */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Kleinere tekst op mobiel */
+    }
+
+    .menu-toggle {
+        font-size: 25px; /* Kleinere knop op mobiel */
+    }
+}
+/* Call to Action Knop */
+.cta-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 8px; /* Aangepast voor een subtiele uitstraling */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Contactformulier
+   ========================== */
+.contact-form {
+    text-align: center;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #f39c12;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* ==========================
+   Locatie & Kaart
+   ========================== */
+.map-contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.map {
+    flex: 1;
+    max-width: 60%;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 35%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   Huisje Info
+   ========================== */
+#huisje-info {
+    padding: 40px 20px;
+    background: linear-gradient(to right, #729fff, #fcd874);
+    text-align: center;
+}
+
+.huisje-details {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.huisje-details h3 {
+    font-size: 1.5rem;
+    color: #fbf9f9;
+    margin-top: 20px;
+}
+
+.huisje-details p, 
+.huisje-details ul {
+    font-size: 1rem;
+    color: #fdc302;
+    line-height: 1.6;
+}
+
+.huisje-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Social Links */
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.2);
+}
+
+/* ==========================
+   Media Queries voor Mobiele Weergave
+   ========================== */
+@media (max-width: 768px) {
+    header {
+        height: 60vh;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    .map-contact-container {
+        flex-direction: column;
+    }
+
+    .map, .contact-info {
+        max-width: 100%;
+    }
+
+    .huisje-slideshow img {
+        width: 90%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links a {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .site-logo {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+/* ==========================
+   Activiteiten in de Omgeving
+   ========================== */
+.activities-section {
+    padding: 50px 20px;
+    background: none;
+    text-align: center;
+}
+
+.activities-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-card {
+    background-color: transparent; /* Verwijder de achtergrondkleur */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.activity-info {
+    padding: 15px;
+}
+
+.activity-info h3 {
+    color: #007BFF;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.activity-info p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.site-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    z-index: 1000;
+}
+
+.site-logo:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================
+   Luxe Glas-effect voor Prijsboxen
+   ========================== */
+.p-box {
+    backdrop-filter: blur(12px); /* Luxe glas-effect */
+    display: block;
+    font-size: 1rem; /* Aangepast naar rem */
+    font-weight: 400;
+    color: #ffffff;
+    padding: 15px 25px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    margin: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.p-box:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    padding: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); /* Luxe glas-effect */
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem; /* Aangepast naar rem */
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.price-box:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.price-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price-options {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.price-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.price-option:last-child {
+    border-bottom: none;
+}
+
+.price-value {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.price-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-button:hover {
+    background: #ffaa00;
+}
+
+/* Activiteiten-knoppen */
+.activity-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.activity-button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* ==========================
+        SlideShow
+   ========================== */
+/* Algemene stijl voor de slideshow */
+.slideshow-container {
+    position: relative;
+    width: 80%; /* De breedte van de slider wordt 80% van de container */
+    max-width: 700px; /* Maximale breedte */
+    margin: 0 auto; /* Centreer de slider */
+    border-radius: 10px; /* Hoekradius voor een zachtere uitstraling */
+    overflow: hidden; /* Zorg ervoor dat de afbeelding niet buiten de container komt */
+}
+
+/* Stijl voor elke individuele slide */
+.slide img {
+    width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte van de container bedekt */
+    height: auto; /* Behoud de verhoudingen van de afbeelding */
+    border-radius: 10px; /* Maak de afbeeldingen ronder */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Voeg een lichte schaduw toe voor diepte */
+    transition: transform 0.3s ease-in-out; /* Voegt een animatie toe bij transities */
+}
+
+.slide img:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding licht bij hover */
+}
+
+/* Stijl voor de navigatie knoppen (vorige en volgende) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Halftransparante zwarte achtergrond */
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100; /* Zet de knoppen boven de afbeeldingen */
+    border-radius: 50%; /* Maak de knoppen rond */
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Donkerder bij hover */
+}
+
+.prev {
+    left: 10px; /* Plaats de vorige knop aan de linkerzijde */
+}
+
+.next {
+    right: 10px; /* Plaats de volgende knop aan de rechterzijde */
+}
+
+/* Stijl voor de navigatie dots */
+.dots {
+    text-align: center;
+    padding: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Verberg de slider als deze niet actief is */
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+/* ==========================
+        Site logo
+   ========================== */
+ 
+.site-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    z-index: 19;
+  }
+
+  .site-logo:hover {
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .site-logo {
+      width: 50px;
+      height: 50px;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
