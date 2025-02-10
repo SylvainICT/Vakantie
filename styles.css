@@ -672,33 +672,6 @@ footer p {
 
 
 
-  ========================== */
-
-/* Zorg ervoor dat de slider er goed uitziet op kleinere schermen (mobiel) */
-@media (max-width: 768px) {
-    .slideshow-container {
-        width: 100%; /* Slider vult de volledige breedte van het scherm op kleinere apparaten */
-        max-width: none; /* Geen maximale breedte voor mobiel */
-        border-radius: 5px; /* Kleinere afgeronde hoeken */
-    }
-
-    .prev, .next {
-        font-size: 24px; /* Kleinere knoppen voor mobiel */
-        padding: 8px; /* Kleinere padding */
-    }
-
-    .slide img {
-        border-radius: 5px; /* Kleinere afgeronde hoeken voor de afbeeldingen */
-    }
-
-    .dots {
-        padding: 8px; /* Kleinere padding voor de dots */
-    }
-
-    .dot {
-        height: 12px; /* Kleinere dots */
-        width: 12px; /* Kleinere dots */
-    }
-}
+  
 
 
