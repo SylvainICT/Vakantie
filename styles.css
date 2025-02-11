@@ -671,6 +671,76 @@ footer p {
   }
 
 
+  .about-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: linear-gradient(to right, #729fff, #fcd874); /* Pas de kleur hier aan */
+    border-radius: 8px;
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden; /* Zorgt ervoor dat de afbeelding niet buiten het element komt */
+  }
+  
+  .about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparante overlay voor de blur */
+    backdrop-filter: blur(10px); /* Het blur-effect */
+    z-index: -1; /* Zorgt ervoor dat de overlay achter de inhoud komt */
+  }
+  
+  .about-content {
+    width: 60%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1; /* Zorgt ervoor dat de tekst voor de afbeelding komt */
+  }
+  
+  .about-content h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 1.1em;
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  .about-content strong {
+    font-weight: bold;
+    color: #e67e22;
+  }
+  
+  .about-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 0; /* Zorgt ervoor dat de afbeelding achter de tekst komt */
+  }
+  
+  .about-image img {
+    width: 120%; /* Vergroot de afbeelding */
+    max-width: none;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden */
+  }
+
  /* Stijl voor het taalkeuzemenu */
 .language-menu {
     position: absolute;
