@@ -13,17 +13,7 @@ h1, h2, h3 {
     color: #050000;
 }
 
-/* ==========================
-   Navigatie & Taalkeuze
-   ========================== */
-.language-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Half-transparante achtergrond */
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+
 
 nav select {
     border: none;
