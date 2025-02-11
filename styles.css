@@ -670,7 +670,58 @@ footer p {
     }
   }
 
+/* Stijl voor het taalkeuzemenu */
+.language-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
 
+/* Basisstijl voor de taalkeuzeselectie */
+.language-selector {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 180px; /* Vaste breedte voor het menu */
+  text-align: left;
+}
+
+/* Voor de opties binnen het taalkeuzemenu */
+.language-selector option {
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* Mobiele responsieve aanpassingen */
+@media (max-width: 768px) {
+  /* Positionering en grootte van het menu op mobiele apparaten */
+  .language-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 150px; /* Kleinere breedte voor mobiele schermen */
+    z-index: 1000; /* Zorgt ervoor dat het menu bovenop andere elementen komt */
+  }
+
+  .language-selector {
+    width: 100%; /* Maak de selector even breed als het beschikbare scherm */
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Opties in het menu verkleinen voor mobiel gebruik */
+  .language-selector option {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 
   
 
