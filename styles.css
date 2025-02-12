@@ -179,6 +179,7 @@ header h1 {
 @media (max-width: 600px) {
     .contact-form input,
     .contact-form textarea {
+        width: 50%;
         padding: 12px; /* Verminder padding voor kleinere schermen */
         margin: 8px 0; /* Kleinere marge */
         font-size: 1rem; /* Kleinere lettergrootte voor mobiele apparaten */
