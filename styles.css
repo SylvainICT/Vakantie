@@ -9,7 +9,7 @@
     color: #fefefe;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h5, h6 {
     color: #050000;
 }
 
@@ -799,3 +799,7 @@ footer p {
         display: inline-block;
     }
 }
+
+h5, h6 {
+    font-size: 28px; /* Dit is dezelfde grootte als h2 */
+  }

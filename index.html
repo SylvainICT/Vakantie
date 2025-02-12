@@ -3,179 +3,271 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">  
-<script src="scripts.js"></script>
-<title>Vakantiehuisdevoetjes</title>
-</head>
-
+  <link rel="stylesheet" href="styles.css">  
+  <script src="scripts.js"></script>
+  <title>Vakantiehuisdevoetjes</title>
 </head>
 <body>
 
   <header>
+    <img src="fotos/OsmoCore-1.jpg" alt="Logo" class="site-logo">
     <h1>Welkom bij VakantiehuisdeVoetjes!</h1>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <!-- Navigatie menu (aanvankelijk verborgen) -->
-<nav class="navbar">
-<!-- Sluitknop -->
-<div class="close-btn" onclick="closeMenu()">×</div>
-<ul id="nav-links" class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="omgevingen.html">Environment</a></li>
-    <li><a href="index2.html">test</a></li>
-</ul>
-</nav>
-</header>
+    <nav class="navbar">
+      <div class="close-btn" onclick="closeMenu()">×</div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="omgevingen.html">Omgeving</a></li>
+      </ul>
+    </nav>
 
-<script>
-    // Voeg de toggleMenu functie toe
-    function toggleMenu() {
-        let navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('active');
-    }
-</script>
-  
-
-    <!-- Logo -->
-<img src="fotos/OsmoCore-1.jpg" alt="Logo" class="site-logo">
+    <div class="language-container">
+      <button class="language-button" onclick="toggleLanguageMenu()">🌍 Taal</button>
+      <ul class="language-menu">
+          <li onclick="changeLanguage('nl')">🇳🇱 Nederlands</li>
+          <li onclick="changeLanguage('en')">🇬🇧 English</li>
+          <li onclick="changeLanguage('de')">🇩🇪 Deutsch</li>
+      </ul>
+  </div>
   </header>
 
   <section id="huisje-info">
     <h2>Over Ons Vakantiehuisje</h2>
-   
+    <div class="slideshow-container">
+      <div class="slide"><img src="Huisjefotos/Foto1.jpeg" alt="Slide 1"></div>
+      <div class="slide"><img src="Huisjefotos/foto2.jpeg" alt="Slide 2"></div>
+      <div class="slide"><img src="Huisjefotos/Foto3.jpeg" alt="Slide 3"></div>
+      <div class="slide"><img src="Huisjefotos/Foto4.jpeg" alt="Slide 4"></div>
+      <div class="slide"><img src="Huisjefotos/Foto5.jpeg" alt="Slide 5"></div>
+      <div class="slide"><img src="Huisjefotos/Foto6.jpeg" alt="Slide 6"></div>
+      <div class="slide"><img src="Huisjefotos/Foto7.jpeg" alt="Slide 7"></div>
+      <div class="slide"><img src="Huisjefotos/Foto8.jpeg" alt="Slide 8"></div>
+      <div class="slide"><img src="Huisjefotos/Foto9.jpeg" alt="Slide 9"></div>
+      <div class="slide"><img src="Huisjefotos/Foto10.jpeg" alt="Slide 10"></div>
+      <div class="slide"><img src="Huisjefotos/Foto11.jpeg" alt="Slide 11"></div>
+      <div class="slide"><img src="Huisjefotos/Foto12.jpeg" alt="Slide 12"></div>
+      <div class="slide"><img src="Huisjefotos/Foto13.jpeg" alt="Slide 13"></div>
+      <div class="slide"><img src="Huisjefotos/Foto14.jpeg" alt="Slide 14"></div>
+      <div class="slide"><img src="Huisjefotos/Foto15.jpeg" alt="Slide 15"></div>
+      <div class="slide"><img src="Huisjefotos/Foto16.jpeg" alt="Slide 16"></div>
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      <div class="dots"></div>
+    </div>
 
-
-            <!-- SlideShow -->
-            <div class="slideshow-container">
-              <div class="slide"><img src="Huisjefotos/Foto1.jpeg" alt="Slide 1"></div>
-              <div class="slide"><img src="Huisjefotos/foto2.jpeg" alt="Slide 2"></div>
-              <div class="slide"><img src="Huisjefotos/Foto3.jpeg" alt="Slide 3"></div>
-              <div class="slide"><img src="Huisjefotos/Foto4.jpeg" alt="Slide 4"></div>
-              <div class="slide"><img src="Huisjefotos/Foto5.jpeg" alt="Slide 5"></div>
-              <div class="slide"><img src="Huisjefotos/Foto6.jpeg" alt="Slide 6"></div>
-              <div class="slide"><img src="Huisjefotos/Foto7.jpeg" alt="Slide 7"></div>
-              <div class="slide"><img src="Huisjefotos/Foto8.jpeg" alt="Slide 8"></div>
-              <div class="slide"><img src="Huisjefotos/Foto9.jpeg" alt="Slide 9"></div>
-              <div class="slide"><img src="Huisjefotos/Foto10.jpeg" alt="Slide 10"></div>
-              <div class="slide"><img src="Huisjefotos/Foto11.jpeg" alt="Slide 11"></div>
-              <div class="slide"><img src="Huisjefotos/Foto12.jpeg" alt="Slide 12"></div>
-              <div class="slide"><img src="Huisjefotos/Foto13.jpeg" alt="Slide 13"></div>
-              <div class="slide"><img src="Huisjefotos/Foto14.jpeg" alt="Slide 14"></div>
-              <div class="slide"><img src="Huisjefotos/Foto15.jpeg" alt="Slide 15"></div>
-              <div class="slide"><img src="Huisjefotos/Foto16.jpeg" alt="Slide 16"></div>
-            
-              <!-- Navigatie buttons -->
-              <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-              <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            
-              <!-- Navigatie dots -->
-              <div class="dots"></div>
-          </div>
-
-
-    <!-- Informatie over het huisje -->
     <div class="huisje-details">
       <div class="p-box">
-      <h3>Beschrijving</h3>
-      <p>Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!</p>
+        <h3>Beschrijving</h3>
+        <p>Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!</p>
       </div>
-     </div>
+    </div>
 
-  
-     <div class="container">
-       <ul class="p-box">
-        <h3 class="">Aanwezig</h3>
+    <div class="container">
+      <ul class="p-box">
+        <h3>Aanwezig</h3>
         <li>4 Persoons Huisje</li>
-        <li>2 slaapkamers met Ieder
-          eigen badkamer</li>
+        <li>2 slaapkamers met ieder eigen badkamer</li>
         <li>2x toilet</li>
         <li>2x douche</li>
         <li>Volledig uitgeruste keuken</li>
-        <li>Gratis Wi-Fi en  TV</li>
-        <li>Terras en aangelegde tuin.</li>
+        <li>Gratis Wi-Fi en TV</li>
+        <li>Terras en aangelegde tuin</li>
         <li>Parkeerplaats met laadpaal beschikbaar</li>
       </ul>
-</div>
-  
-<div class="p-box">
-  <h4>Aanvullende Info:</h4>
-  <p>
-    Aanvullend; alle ruimtes zijn voorzien van vloerverwarming (in de zomer vloer koeling). Op de 1e verdieping wordt nog een inpandige sauna voorzien (verwacht dat dit voor de zomer wel gerealiseerd is).</p>
     </div>
 
+    <div class="p-box">
+        <h4>Aanvullende Info:</h4>
+        <p class="p2">Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid).</p>
+      </div>
 
     <div class="price-box">
       <div class="price-title">Tarieven Vakantiehuisje</div>
-      
       <div class="price-options">
-          <div class="price-option">
-              <span>Weekend (2 nachten)</span>
-              <span class="price-value">€199,-</span>
-          </div>
-          <div class="price-option">
-              <span>Midweek (4 nachten)</span>
-              <span class="price-value">€349,-</span>
-          </div>
-          <div class="price-option">
-              <span>Week (7 nachten)</span>
-              <span class="price-value">€599,-</span>
-          </div>
+        <div class="price-option">
+          <span>Weekend (2 nachten)</span>
+          <span class="price-value">€199,-</span>
+        </div>
+        <div class="price-option">
+          <span>Midweek (4 nachten)</span>
+          <span class="price-value">€349,-</span>
+        </div>
+        <div class="price-option">
+          <span>Week (7 nachten)</span>
+          <span class="price-value">€599,-</span>
+        </div>
       </div>
-    
-      <button class="price-button" onclick="window.location.href='0618016007'">Bel voor boeking</button></div>
-  
-  
+      <button class="price-button" onclick="window.location.href='0618016007'">Bel voor boeking</button>
+    </div>
+  </section>
 
-  <!-- Contactformulier -->
   <section class="contact-form">
-    <h2>Neem contact met ons op</h2>
+    <h5>Neem contact met ons op</h5>
     <form action="#" method="post">
       <input type="text" name="name" placeholder="Naam" required>
-      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="email" name="email" placeholder="Email" required>
       <textarea name="message" placeholder="Bericht" required></textarea>
-      <button type="submit">Verzend bericht</button>
+      <button type="submit">Stuur bericht</button>
     </form>
   </section>
 
   <section id="location">
-    <h2>Waar vindt je ons?</h2>
+    <h6>Waar te vinden?</h6>
     <div class="map-contact-container">
-      <!-- OpenStreetMap iframe -->
       <div class="map">
-        <iframe 
-          src="https://www.openstreetmap.org/export/embed.html?bbox=4.895168,52.370216,4.921052,52.390216" 
-          width="100%" height="400px" style="border: 1px solid #ccc; border-radius: 8px;" 
-          allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=4.895168,52.370216,4.921052,52.390216" width="100%" height="400px" style="border: 1px solid #ccc; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
       </div>
-  
-      <!-- Contactgegevens -->
       <div class="contact-info">
         <h3>Contact Gegevens</h3>
-        <p><strong>Adres:</strong> purmerend</p>
+        <p><strong>Adres:</strong> Purmerend</p>
         <p><strong>Telefoon:</strong> 0618016007</p>
-        <p><strong>E-mail:</strong> <a href="mailto:info@osmocore.nl">info@osmocore.nl</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@osmocore.nl">info@osmocore.nl</a></p>
         <p><strong>Website:</strong> <a href="https://www.osmocore.nl">www.osmocore.nl</a></p>
       </div>
     </div>
   </section>
 
-  
+  <footer>
     <div class="footer-container">
-      <!-- Klein logo aan de linkerzijde -->
       <a href="https://www.osmocore.nl" target="_blank" class="footer-logo">
         <img src="fotos/OsmoCore-1.jpg" alt="Jouw Logo" width="50" height="50">
       </a>
-  
-      <p>&copy; 2025 Jouw Vakantiehuisje. Powerd by osmocore
-      </p>
-      
-      <div class="social-links">
-        <a href="https://www.facebook.com/jouwsite" target="_blank">Facebook</a>
-        <a href="https://www.instagram.com/jouwsite" target="_blank">Instagram</a>
-        <a href="https://www.twitter.com/jouwsite" target="_blank">Twitter</a>
-      </div>
+      <p>&copy; 2025 Jouw Vakantiehuisje. Powered by osmocore</p>
     </div>
   </footer>
+
+  <script>
+    function toggleLanguageMenu() {
+      const languageMenu = document.querySelector(".language-menu");
+      languageMenu.classList.toggle("active");
+    }
+  
+    function changeLanguage(lang = "nl") {
+  const elements = {
+    nl: {
+      h1: "Welkom bij VakantiehuisdeVoetjes!",
+      h2: "Over Ons Vakantiehuisje",
+      h3: "Beschrijving",
+      h4: "Aanvullende Info",
+      h5: "Neem contact met ons op",  // Vertaling toegevoegd
+      h6: "Waar te vinden?",  // Vertaling toegevoegd
+      beschrijving: "Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!",
+      tarieven: "Tarieven Vakantiehuisje",
+      aanvullendeInfo: "Aanvullende Info:",
+      contactOp: "Neem contact met ons op",
+      contactDetails: "Contact Gegevens",
+      prijsButton: "Bel voor boeking",
+      prijsWeekend: "Weekend (2 nachten)",
+      prijsMidweek: "Midweek (4 nachten)",
+      prijsWeek: "Week (7 nachten)",
+      aanwezig: "Aanwezig",
+      lijstAanwezig: [
+        "4 Persoons Huisje",
+        "2 slaapkamers met ieder eigen badkamer",
+        "2x toilet",
+        "2x douche",
+        "Volledig uitgeruste keuken",
+        "Gratis Wi-Fi en TV",
+        "Terras en aangelegde tuin",
+        "Parkeerplaats met laadpaal beschikbaar",
+      ],
+      p2: "Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid)."
+    },
+    en: {
+      h1: "Welcome to HolidayHomeDeVoetjes!",
+      h2: "About Our Holiday Home",
+      h3: "Description",
+      h4: "Additional Info",
+      h5: "Contact Us",  // Vertaling toegevoegd
+      h6: "Where to Find Us?",  // Vertaling toegevoegd
+      beschrijving: "Our cozy holiday home is located in a beautiful, natural setting. It is perfect for those seeking peace and adventure!",
+      tarieven: "Rates for Holiday Home",
+      aanvullendeInfo: "Additional Info:",
+      contactOp: "Contact Us",
+      contactDetails: "Contact Details",
+      prijsButton: "Call to Book",
+      prijsWeekend: "Weekend (2 nights)",
+      prijsMidweek: "Midweek (4 nights)",
+      prijsWeek: "Week (7 nights)",
+      aanwezig: "Available",
+      lijstAanwezig: [
+        "4 Person Cottage",
+        "2 bedrooms with private bathroom",
+        "2x toilet",
+        "2x shower",
+        "Fully equipped kitchen",
+        "Free Wi-Fi and TV",
+        "Terrace and landscaped garden",
+        "Parking with charging station available",
+      ],
+      p2: "Additionally, all rooms are equipped with underfloor heating (underfloor cooling in summer). A sauna will be added to the first floor (expected to be completed by summer)."
+    },
+    de: {
+      h1: "Willkommen bei FerienhausdeVoetjes!",
+      h2: "Über Unser Ferienhaus",
+      h3: "Beschreibung",
+      h4: "Zusätzliche Informationen",
+      h5: "Kontaktieren Sie uns",  // Vertaling toegevoegd
+      h6: "Wo zu finden?",  // Vertaling toegevoegd
+      beschrijving: "Unser gemütliches Ferienhaus liegt in einer wunderschönen, natürlichen Umgebung. Es ist perfekt für Ruhe- und Abenteuerliebhaber!",
+      tarieven: "Preise für das Ferienhaus",
+      aanvullendeInfo: "Zusätzliche Informationen:",
+      contactOp: "Kontaktieren Sie uns",
+      contactDetails: "Kontaktdaten",
+      prijsButton: "Anrufen für Buchung",
+      prijsWeekend: "Wochenende (2 Nächte)",
+      prijsMidweek: "Midweek (4 Nächte)",
+      prijsWeek: "Woche (7 Nächte)",
+      aanwezig: "Verfügbar",
+      lijstAanwezig: [
+        "4 Personen Ferienhaus",
+        "2 Schlafzimmer mit eigenem Bad",
+        "2x Toilette",
+        "2x Dusche",
+        "Voll ausgestattete Küche",
+        "Kostenloses WLAN und TV",
+        "Terrasse und angelegter Garten",
+        "Parkplatz mit Ladeanschluss verfügbar",
+      ],
+      p2: "Zusätzlich sind alle Räume mit Fußbodenheizung ausgestattet (im Sommer Fußboden-Kühlung). Ein Sauna wird im ersten Stock hinzugefügt (Voraussichtlich bis Sommer fertig)."
+    },
+  };
+
+  // Update de tekst op de pagina
+  document.querySelector("h1").textContent = elements[lang].h1;
+  document.querySelector("h2").textContent = elements[lang].h2;
+  document.querySelector("h3").textContent = elements[lang].h3;
+  document.querySelector("h4").textContent = elements[lang].h4;
+  document.querySelector("h5").textContent = elements[lang].h5;  // Update h5
+  document.querySelector("h6").textContent = elements[lang].h6;  // Update h6
+  document.querySelector(".p-box p").textContent = elements[lang].beschrijving;
+  document.querySelector(".price-title").textContent = elements[lang].tarieven;
+  document.querySelector(".price-button").textContent = elements[lang].prijsButton;
+
+  // Update prijzen
+  const priceOptions = document.querySelectorAll(".price-option span");
+  priceOptions[0].textContent = elements[lang].prijsWeekend;
+  priceOptions[1].textContent = elements[lang].prijsMidweek;
+  priceOptions[2].textContent = elements[lang].prijsWeek;
+
+  // Update lijst van aanwezige voorzieningen
+  document.querySelector(".container h3").textContent = elements[lang].aanwezig;
+  const listItems = document.querySelectorAll(".container li");
+  elements[lang].lijstAanwezig.forEach((item, index) => {
+    listItems[index].textContent = item;
+  });
+
+  // Update aanvullende info
+  document.querySelector(".p-box h4").textContent = elements[lang].aanvullendeInfo;
+  document.querySelector(".p2").textContent = elements[lang].p2;
+
+  // Update contactinformatie
+  document.querySelector(".contact-info h3").textContent = elements[lang].contactDetails;
+  document.querySelector(".footer-container p").textContent = "© 2025 " + elements[lang].h1 + " Powered by osmocore";
+}
+
+// Zet standaardtaal in
+changeLanguage('nl');
+  </script>
 </body>
 </html>
-
-
