@@ -134,9 +134,7 @@ header h1 {
 
 /* Zorg ervoor dat het hamburger menu goed zichtbaar is op mobiel */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem; /* Kleinere tekst op mobiel */
-    }
+   
 
     .menu-toggle {
         font-size: 25px; /* Kleinere knop op mobiel */
@@ -177,9 +175,12 @@ header h1 {
 }
 /* Mediaquery voor telefoons (schermen kleiner dan 600px) */
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 0.5rem; /* Kleinere tekst op mobiel */
+    }
     .contact-form input,
     .contact-form textarea {
-        width: 50%;
+        width: 30%;
         padding: 12px; /* Verminder padding voor kleinere schermen */
         margin: 8px 0; /* Kleinere marge */
         font-size: 1rem; /* Kleinere lettergrootte voor mobiele apparaten */
