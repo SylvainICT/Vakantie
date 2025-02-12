@@ -44,7 +44,7 @@ nav select {
 }
 
 header h1 {
-    font-size: 1rem;
+    font-size: 2rem;
     position: absolute;
     top: 0;
     left: 50%;
@@ -480,6 +480,15 @@ footer p {
     font-weight: 500;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .price-box {
+        width: 90%; /* Zorg ervoor dat de box kleiner is op mobiele schermen */
+        padding: 15px; /* Minder padding voor kleinere schermen */
+        font-size: 0.9rem; /* Kleinere tekst op mobiele apparaten */
+        border-radius: 10px; /* Iets kleinere hoeken */
+    }
 }
 
 .price-box:hover {
