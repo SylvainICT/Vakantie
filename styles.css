@@ -175,6 +175,16 @@ header h1 {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+/* Mediaquery voor telefoons (schermen kleiner dan 600px) */
+@media (max-width: 600px) {
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px; /* Verminder padding voor kleinere schermen */
+        margin: 8px 0; /* Kleinere marge */
+        font-size: 1rem; /* Kleinere lettergrootte voor mobiele apparaten */
+        border-radius: 4px; /* Iets kleinere hoeken */
+    }
+}
 
 .contact-form button {
     background-color: #f39c12;
@@ -317,14 +327,14 @@ footer p {
 /* ==========================
    Media Queries voor Mobiele Weergave
    ========================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     header {
         height: 60vh;
         padding: 20px;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .cta-button {
