@@ -13,6 +13,9 @@ h1, h2, h3 {
     color: #050000;
 }
 
+/* ==========================
+   Navigatie & Taalkeuze
+   ========================== */
 
 
 nav select {
@@ -731,50 +734,68 @@ footer p {
     object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden */
   }
 
-/* Stijl voor het taalkeuzemenu */
+  .language-container {
+    position: absolute;
+    top: 19px; /* Zorg dat dit een geldige waarde heeft */
+    right: 50px;
+  
+}
+
+.language-button {
+    background-color: #007bff;
+    color: white;
+    border: none; /* Zorg ervoor dat er geen rand is */
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+ 
+}
+
+.language-button:hover {
+    background-color: #0056b3;
+}
+
 .language-menu {
-  position: relative; /* Zorgt ervoor dat het normaal in de flow van de pagina blijft */
-  margin-top: 20px; /* Zet een marge boven het menu om wat ruimte te creëren */
-  text-align: center; /* Centreer de taalkeuze horizontaal */
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #0056b3;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+    min-width: 150px;
+    z-index: 10;
+    
 }
 
-/* Stijl voor de taalkeuzeselectie */
-.language-selector {
-  font-size: 16px;
-  padding: 8px 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 180px; /* Vaste breedte voor het menu */
-  text-align: left;
+.language-menu.active {
+    display: block;
 }
 
-/* Voor de opties binnen het taalkeuzemenu */
-.language-selector option {
-  font-size: 16px;
-  padding: 10px;
+.language-menu li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
-/* Mobiele responsieve aanpassingen */
+.language-menu li:hover {
+    background: rgba(255, 255, 255, 0.1); /* Subtiele hover-effect */
+}
+
+/* 📱 Mobiel: Plaats de knop onder h1 */
 @media (max-width: 768px) {
-  /* Alleen op mobiele apparaten het menu onder de tekst plaatsen */
-  .language-menu {
-    margin-top: 30px; /* Zet extra ruimte boven het menu voor mobiel */
-    text-align: center; /* Centreer de taalkeuze op mobiele schermen */
-  }
+    .language-container {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
 
-  .language-selector {
-    width: 100%; /* Maak de selector even breed als het beschikbare scherm */
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .language-selector option {
-    font-size: 14px;
-    padding: 8px;
-  }
+    .language-button {
+        width: auto;
+        display: inline-block;
+    }
 }

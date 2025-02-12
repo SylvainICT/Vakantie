@@ -22,14 +22,14 @@
       </ul>
     </nav>
 
-    <!-- Taalkeuze menu met vlaggen -->
-    <div class="language-menu">
-      <select id="language-selector" class="language-selector" onchange="changeLanguage()">
-        <option value="nl" data-flag="nl">🇳🇱 Nederlands</option>
-        <option value="en" data-flag="en">🇬🇧 Engels</option>
-        <option value="de" data-flag="de">🇩🇪 Duits</option>
-      </select>
-    </div>
+    <div class="language-container">
+      <button class="language-button" onclick="toggleLanguageMenu()">🌍 Taal</button>
+      <ul class="language-menu">
+          <li onclick="changeLanguage('nl')">🇳🇱 Nederlands</li>
+          <li onclick="changeLanguage('en')">🇬🇧 English</li>
+          <li onclick="changeLanguage('de')">🇩🇪 Deutsch</li>
+      </ul>
+  </div>
   </header>
 
   <section id="huisje-info">
@@ -138,78 +138,137 @@
   </footer>
 
   <script>
-    function changeLanguage() {
-      const lang = document.getElementById('language-selector').value;
-      const elements = {
-        nl: {
-          h1: 'Welkom bij VakantiehuisdeVoetjes!',
-          huisjeInfo: 'Over Ons Vakantiehuisje',
-          beschrijving: 'Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!',
-          tarieven: 'Tarieven Vakantiehuisje',
-          aanvullendeInfo: 'Aanvullende Info:',
-          contactOp: 'Neem contact met ons op',
-          contactDetails: 'Contact Gegevens',
-          prijsButton: 'Bel voor boeking',
-          prijsWeekend: 'Weekend (2 nachten)',
-          prijsMidweek: 'Midweek (4 nachten)',
-          prijsWeek: 'Week (7 nachten)',
-          aanwezig: 'Aanwezig',
-          lijstAanwezig: ['4 Persoons Huisje', '2 slaapkamers met ieder eigen badkamer', '2x toilet', '2x douche', 'Volledig uitgeruste keuken', 'Gratis Wi-Fi en TV', 'Terras en aangelegde tuin', 'Parkeerplaats met laadpaal beschikbaar']
-        },
-        en: {
-          h1: 'Welcome to HolidayHomeDeVoetjes!',
-          huisjeInfo: 'About Our Holiday Home',
-          beschrijving: 'Our cozy holiday home is located in a beautiful, natural setting. It is perfect for those seeking peace and adventure!',
-          tarieven: 'Rates for Holiday Home',
-          aanvullendeInfo: 'Additional Info:',
-          contactOp: 'Contact Us',
-          contactDetails: 'Contact Details',
-          prijsButton: 'Call to Book',
-          prijsWeekend: 'Weekend (2 nights)',
-          prijsMidweek: 'Midweek (4 nights)',
-          prijsWeek: 'Week (7 nights)',
-          aanwezig: 'Available',
-          lijstAanwezig: ['4 Person Cottage', '2 bedrooms with private bathroom', '2x toilet', '2x shower', 'Fully equipped kitchen', 'Free Wi-Fi and TV', 'Terrace and landscaped garden', 'Parking with charging station available']
-        },
-        de: {
-          h1: 'Willkommen bei FerienhausdeVoetjes!',
-          huisjeInfo: 'Über Unser Ferienhaus',
-          beschrijving: 'Unser gemütliches Ferienhaus liegt in einer wunderschönen, natürlichen Umgebung. Es ist perfekt für Ruhe- und Abenteuerliebhaber!',
-          tarieven: 'Preise für das Ferienhaus',
-          aanvullendeInfo: 'Zusätzliche Informationen:',
-          contactOp: 'Kontaktieren Sie uns',
-          contactDetails: 'Kontaktdaten',
-          prijsButton: 'Anrufen für Buchung',
-          prijsWeekend: 'Wochenende (2 Nächte)',
-          prijsMidweek: 'Midweek (4 Nächte)',
-          prijsWeek: 'Woche (7 Nächte)',
-          aanwezig: 'Verfügbar',
-          lijstAanwezig: ['4 Personen Ferienhaus', '2 Schlafzimmer mit eigenem Bad', '2x Toilette', '2x Dusche', 'Voll ausgestattete Küche', 'Kostenloses WLAN und TV', 'Terrasse und angelegter Garten', 'Parkplatz mit Ladeanschluss verfügbar']
-        }
-      };
+    function toggleLanguageMenu() {
+    document.querySelector(".language-menu").classList.toggle("active");
+}
 
-      // Update content based on selected language
-      document.querySelector('h1').textContent = elements[lang].h1;
-      document.querySelector('#huisje-info h2').textContent = elements[lang].huisjeInfo;
-      document.querySelector('.p-box p').textContent = elements[lang].beschrijving;
-      document.querySelector('.price-title').textContent = elements[lang].tarieven;
-      document.querySelector('.price-button').textContent = elements[lang].prijsButton;
+function changeLanguage(lang) {
+    localStorage.setItem("selectedLanguage", lang);
+    location.reload(); // Herlaadt de pagina om de vertaling toe te passen
+}
 
-      const priceOptions = document.querySelectorAll('.price-option span');
-      priceOptions[0].textContent = elements[lang].prijsWeekend;
-      priceOptions[1].textContent = elements[lang].prijsMidweek;
-      priceOptions[2].textContent = elements[lang].prijsWeek;
+// Controleer bij het laden van de pagina welke taal eerder is gekozen
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("selectedLanguage") || "nl";
+    changeLanguage(savedLanguage);
+});
 
-      // Update the "Aanwezig" / "Available" list
-      document.querySelector('.container h3').textContent = elements[lang].aanwezig;
-      const aanwezigList = document.querySelectorAll('.container li');
-      elements[lang].lijstAanwezig.forEach((item, index) => {
-        aanwezigList[index].textContent = item;
-      });
-
-      // Update the "Aanvullende Info" / "Additional Info"
-      document.querySelector('.p-box h4').textContent = elements[lang].aanvullendeInfo;
+// Sluit het menu als je buiten klikt
+document.addEventListener("click", (event) => {
+    if (!document.querySelector(".language-container").contains(event.target)) {
+        document.querySelector(".language-menu").classList.remove("active");
     }
+});
+  function changeLanguage(lang = null) {
+  if (!lang) {
+    lang = localStorage.getItem("selectedLanguage") || "nl"; // Haal vorige taalkeuze op of standaard Nederlands
+  } else {
+    localStorage.setItem("selectedLanguage", lang); // Sla nieuwe keuze op
+  }
+
+  const elements = {
+    nl: {
+      h1: "Welkom bij VakantiehuisdeVoetjes!",
+      huisjeInfo: "Over Ons Vakantiehuisje",
+      beschrijving: "Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!",
+      tarieven: "Tarieven Vakantiehuisje",
+      aanvullendeInfo: "Aanvullende Info:",
+      contactOp: "Neem contact met ons op",
+      contactDetails: "Contact Gegevens",
+      prijsButton: "Bel voor boeking",
+      prijsWeekend: "Weekend (2 nachten)",
+      prijsMidweek: "Midweek (4 nachten)",
+      prijsWeek: "Week (7 nachten)",
+      aanwezig: "Aanwezig",
+      lijstAanwezig: [
+        "4 Persoons Huisje",
+        "2 slaapkamers met ieder eigen badkamer",
+        "2x toilet",
+        "2x douche",
+        "Volledig uitgeruste keuken",
+        "Gratis Wi-Fi en TV",
+        "Terras en aangelegde tuin",
+        "Parkeerplaats met laadpaal beschikbaar",
+      ],
+    },
+    en: {
+      h1: "Welcome to HolidayHomeDeVoetjes!",
+      huisjeInfo: "About Our Holiday Home",
+      beschrijving: "Our cozy holiday home is located in a beautiful, natural setting. It is perfect for those seeking peace and adventure!",
+      tarieven: "Rates for Holiday Home",
+      aanvullendeInfo: "Additional Info:",
+      contactOp: "Contact Us",
+      contactDetails: "Contact Details",
+      prijsButton: "Call to Book",
+      prijsWeekend: "Weekend (2 nights)",
+      prijsMidweek: "Midweek (4 nights)",
+      prijsWeek: "Week (7 nights)",
+      aanwezig: "Available",
+      lijstAanwezig: [
+        "4 Person Cottage",
+        "2 bedrooms with private bathroom",
+        "2x toilet",
+        "2x shower",
+        "Fully equipped kitchen",
+        "Free Wi-Fi and TV",
+        "Terrace and landscaped garden",
+        "Parking with charging station available",
+      ],
+    },
+    de: {
+      h1: "Willkommen bei FerienhausdeVoetjes!",
+      huisjeInfo: "Über Unser Ferienhaus",
+      beschrijving: "Unser gemütliches Ferienhaus liegt in einer wunderschönen, natürlichen Umgebung. Es ist perfekt für Ruhe- und Abenteuerliebhaber!",
+      tarieven: "Preise für das Ferienhaus",
+      aanvullendeInfo: "Zusätzliche Informationen:",
+      contactOp: "Kontaktieren Sie uns",
+      contactDetails: "Kontaktdaten",
+      prijsButton: "Anrufen für Buchung",
+      prijsWeekend: "Wochenende (2 Nächte)",
+      prijsMidweek: "Midweek (4 Nächte)",
+      prijsWeek: "Woche (7 Nächte)",
+      aanwezig: "Verfügbar",
+      lijstAanwezig: [
+        "4 Personen Ferienhaus",
+        "2 Schlafzimmer mit eigenem Bad",
+        "2x Toilette",
+        "2x Dusche",
+        "Voll ausgestattete Küche",
+        "Kostenloses WLAN und TV",
+        "Terrasse und angelegter Garten",
+        "Parkplatz mit Ladeanschluss verfügbar",
+      ],
+    },
+  };
+
+  // Update de tekst op de pagina
+  document.querySelector("h1").textContent = elements[lang].h1;
+  document.querySelector("#huisje-info h2").textContent = elements[lang].huisjeInfo;
+  document.querySelector(".p-box p").textContent = elements[lang].beschrijving;
+  document.querySelector(".price-title").textContent = elements[lang].tarieven;
+  document.querySelector(".price-button").textContent = elements[lang].prijsButton;
+
+  // Update prijzen
+  const priceOptions = document.querySelectorAll(".price-option span");
+  priceOptions[0].textContent = elements[lang].prijsWeekend;
+  priceOptions[1].textContent = elements[lang].prijsMidweek;
+  priceOptions[2].textContent = elements[lang].prijsWeek;
+
+  // Update de "Aanwezig" / "Available" lijst
+  document.querySelector(".container h3").textContent = elements[lang].aanwezig;
+  const aanwezigList = document.querySelectorAll(".container li");
+  aanwezigList.forEach((li, index) => {
+    li.textContent = elements[lang].lijstAanwezig[index] || "";
+  });
+
+  // Update aanvullende info
+  document.querySelector(".p-box h4").textContent = elements[lang].aanvullendeInfo;
+}
+
+// Zorg dat de juiste taal wordt ingeladen bij paginalaad
+document.addEventListener("DOMContentLoaded", () => {
+  changeLanguage();
+});
   </script>
 
 </body>
