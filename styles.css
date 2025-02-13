@@ -5,13 +5,16 @@
     background: linear-gradient(to right, #729fff, #fcd874);
     margin: 0;
     padding: 0;
-        font-family: 'FangSong';
+ font-family: 'FangSong';
     
     color: black;
 }
 
-h1, h2, h3, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     color: #050000;
+    font-style: 'FangSong'
+    ;
+    font-family: 'FangSong';
 }
 
 /* ==========================
@@ -20,6 +23,7 @@ h1, h2, h3, h5, h6 {
 
 
 nav select {
+    font-family: 'FangSong';
     border: none;
     background: transparent;
     color: white;
@@ -42,9 +46,11 @@ nav select {
     align-items: center;
     flex-direction: column;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'FangSong';
 }
 
 header h1 {
+    font-family: 'FangSong';
     font-size: 2rem;
     position: absolute;
     top: 90px;
@@ -270,7 +276,7 @@ header h1 {
 .huisje-details p, 
 .huisje-details ul {
     font-size: 1rem;
-    color: #fdc302;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -283,7 +289,7 @@ header h1 {
    Footer
    ========================== */
 footer {
-    background-color: #333;
+    background-color:none;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -481,7 +487,7 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 250px;
     padding: 25px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
@@ -534,7 +540,7 @@ footer p {
 
 .price-value {
     font-weight: bold;
-    color: #ffcc00;
+    color: #020200;
 }
 
 .price-button {

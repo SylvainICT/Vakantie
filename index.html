@@ -6,8 +6,13 @@
   <link rel="stylesheet" href="styles.css">  
   <script src="scripts.js"></script>
   <title>Vakantiehuisdevoetjes</title>
+  <style>
+  :root{
+  font-family: 'FangSong';}
+  </style>
 </head>
 <body>
+
 
   <header>
     <img src="fotos/OsmoCore-1.jpg" alt="Logo" class="site-logo">
@@ -114,44 +119,43 @@
         </div>
          <button class="price-button" onclick="window.location.href='tel:0618016007'">Bel voor boeking</button>
           </div>
+
+          
           <div class="container3">
             <div class="season-container">
-              <div class="season-dates">
-                <h3>Seizoensdata</h3>
-          
-                <h4 class="h9">hoogseizoen</h4>
-          
-                <!-- Voorjaarsvakantie -->
-                <div class="season">
-                  <h4>spring-break</h4>
-                  <p> <span id="spring-break-start">Week 7</span></p>
-                  <p> <span id="spring-break-end">Week 8</span></p>
+                <div class="season-dates">
+                    <h3 id="season-title">Seizoensdata</h3>
+    
+                    <!-- Voorjaarsvakantie -->
+                    <div class="season">
+                        <h4 id="spring-title">Voorjaarsvakantie</h4>
+                        <p><span id="spring-break-start">Week 7</span></p>
+                        <p><span id="spring-break-end">Week 8</span></p>
+                    </div>
+    
+                    <!-- Zomervakantie -->
+                    <div class="season">
+                        <h4 id="summer-title">Zomervakantie</h4>
+                        <p><span id="summer-break-start">Week 26</span></p>
+                        <p><span id="summer-break-end">Week 35</span></p>
+                    </div>
+    
+                    <!-- Kerstvakantie -->
+                    <div class="season">
+                        <h4 id="christmasBreak">Kerstvakantie</h4>
+                        <p><span id="christmas-break-start">Week 51</span></p>
+                        <p><span id="christmas-break-end">Week 1</span></p>
+                    </div>
+    
+                    <!-- Laagseizoen -->
+                    <div class="season">
+                        <h4 id="low-season-title">Laagseizoen</h4>
+                        <p><span id="low-season-start">Week 36</span></p>
+                        <p><span id="low-season-end">Week 21</span></p>
+                    </div>
                 </div>
-          
-                <!-- Zomervakantie -->
-                <div class="season">
-                  <h4>summer</h4>
-                  <p> <span id="summer-break-start">Week 26</span></p>
-                  <p> <span id="summer-break-end">Week 35</span></p>
-                </div>
-          
-                <!-- Kerstvakantie -->
-                <div class="season">
-                  <h4>christmas</h4>
-                  <p> <span id="christmas-break-start">Week 51</span></p>
-                  <p> <span id="christmas-break-end">Week 1</span></p>
-                </div>
-          
-                <!-- Laagseizoen -->
-                <div class="season">
-                  <h4>low-season</h4>
-                  <p> <span id="low-season-start">Week 36</span></p>
-                  <p> <span id="low-season-end">Week 21</span></p>
-                </div>
-          
-              </div>
             </div>
-          </div>
+        </div>
       <div class="calendar-container">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FAmsterdam&showPrint=0&showTabs=0&showNav=0&showCalendars=0&mode=WEEK&title&src=c3lsdmFpbkBvc21vY29yZS5ubA&color=%23039BE5" style="border: 0"></iframe>
     </div>
@@ -223,7 +227,21 @@
               weekend: "Weekend (2 nachten): €199,-",
               midweek: "Midweek (4 nachten): €349,-",
               week: "Week (7 nachten): €599,-"
-            }
+            },
+            season_title: "Seizoensdata",
+            spring_title: "Voorjaarsvakantie",
+            summer_title: "Zomervakantie",
+            christmas_title: "Kerstvakantie",
+            low_season_title: "Laagseizoen",
+
+            spring_break_start: "Week 7",
+            spring_break_end: "Week 8",
+            summer_break_start: "Week 26",
+            summer_break_end: "Week 35",
+            christmas_break_start: "Week 51",
+            christmas_break_end: "Week 1",
+            low_season_start: "Week 36",
+            low_season_end: "Week 21", 
           },
           aanwezig: [
             "4 Persoons Huisje",
@@ -303,7 +321,7 @@ seasonDates: {
             "Parking space with charging station available"
           ],
           p2: "Additionally, all rooms are equipped with underfloor heating (underfloor cooling in summer). A sauna will be added to the first floor (expected to be completed by summer).",
-          
+        
           seasonDates: {
             title: "Season Dates",
             highSeason: {
@@ -370,8 +388,15 @@ seasonDates: {
           ],
           p2: "Zusätzlich sind alle Räume mit Fußbodenheizung ausgestattet (im Sommer Fußboden-Kühlung). Ein Sauna wird im ersten Stock hinzugefügt (Voraussichtlich bis Sommer fertig).",
           // Seizoensdata
+          seizoensData: {
+                title: "Saisonzeiten",
+                spring: "Frühlingsferien",
+                summer: "Sommerferien",
+                christmas: "Weihnachtsferien",
+                low: "Nebensaison"
+          },
           seasonDates: {
-            title: "Saisonzeiten",
+           title: "Saisonzeiten",
             highSeason: {
               title: "Hochsaison",
               start: "Startdatum: 1. Juni",
@@ -458,16 +483,7 @@ seasonDates: {
       document.querySelector(".price-title").textContent = elements[lang].tarieven;
       document.querySelector(".price-button").textContent = elements[lang].prijsButton;
 
-      // Update seizoen data
-      document.querySelector('.season-dates h3').textContent = elements[lang].seasonDates.title;
-      document.querySelector('.season:nth-of-type(1) h4').textContent = elements[lang].seasonDates.highSeason.title;
-      document.querySelector('#high-season-start').textContent = elements[lang].seasonDates.highSeason.start;
-      document.querySelector('#high-season-end').textContent = elements[lang].seasonDates.highSeason.end;
-
-      document.querySelector('.season:nth-of-type(2) h4').textContent = elements[lang].seasonDates.springBreak.title;
-      document.querySelector('#spring-break-start').textContent = elements[lang].seasonDates.springBreak.start;
-      document.querySelector('#spring-break-end').textContent = elements[lang].seasonDates.springBreak.end;
-
+      
       document.querySelector('.season:nth-of-type(3) h4').textContent = elements[lang].seasonDates.summerBreak.title;
       document.querySelector('#summer-break-start').textContent = elements[lang].seasonDates.summerBreak.start;
       document.querySelector('#summer-break-end').textContent = elements[lang].seasonDates.summerBreak.end;
