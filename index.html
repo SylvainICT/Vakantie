@@ -16,8 +16,8 @@
     <nav class="navbar">
       <div class="close-btn" onclick="closeMenu()">×</div>
       <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="omgevingen.html">Omgeving</a></li>
+        <li><a href="over.html">about us</a></li>
+        <li><a href="omgevingen.html">Omgeving</a></li> 
       </ul>
     </nav>
 
@@ -75,31 +75,87 @@
         <li>Parkeerplaats met laadpaal beschikbaar</li>
       </ul>
     </div>
-
     <div class="p-box">
-        <h4>Aanvullende Info:</h4>
-        <p class="p2">Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid).</p>
-      </div>
-
-    <div class="price-box">
-      <div class="price-title">Tarieven Vakantiehuisje</div>
-      <div class="price-options">
-        <div class="price-option">
-          <span>Weekend (2 nachten)</span>
-          <span class="price-value">€199,-</span>
-        </div>
-        <div class="price-option">
-          <span>Midweek (4 nachten)</span>
-          <span class="price-value">€349,-</span>
-        </div>
-        <div class="price-option">
-          <span>Week (7 nachten)</span>
-          <span class="price-value">€599,-</span>
-        </div>
-      </div>
-      <button class="price-button" onclick="window.location.href='0618016007'">Bel voor boeking</button>
+      <h4>Aanvullende Info:</h4>
+      <p class="p2">Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid).</p>
     </div>
-  </section>
+    <div class="container3">
+      <div class="price-box">
+        <div class="price-title">Tarieven Vakantiehuisje</div>
+      
+        <div class="season2">
+          <h3 id="high-season-title">Hoogseizoen</h3>
+          <div class="price-options">
+            <div class="price-option">
+              <span id="weekend-high">Weekend (2 nachten): €249,-</span>
+            </div>
+            <div class="price-option">
+              <span id="midweek-high">Midweek (4 nachten): €399,-</span>
+            </div>
+            <div class="price-option">
+              <span id="week-high">Week (7 nachten): €699,-</span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="season2">
+          <h3 id="low-season-title">Laagseizoen</h3>
+          <div class="price-options">
+            <div class="price-option">
+              <span id="weekend-low">Weekend (2 nachten): €199,-</span>
+            </div>
+            <div class="price-option">
+              <span id="midweek-low">Midweek (4 nachten): €349,-</span>
+            </div>
+            <div class="price-option">
+              <span id="week-low">Week (7 nachten): €599,-</span>
+            </div>
+          </div>
+        </div>
+         <button class="price-button" onclick="window.location.href='tel:0618016007'">Bel voor boeking</button>
+          </div>
+          <div class="container3">
+            <div class="season-container">
+              <div class="season-dates">
+                <h3>Seizoensdata</h3>
+          
+                <h4 class="h9">hoogseizoen</h4>
+          
+                <!-- Voorjaarsvakantie -->
+                <div class="season">
+                  <h4>spring-break</h4>
+                  <p> <span id="spring-break-start">Week 7</span></p>
+                  <p> <span id="spring-break-end">Week 8</span></p>
+                </div>
+          
+                <!-- Zomervakantie -->
+                <div class="season">
+                  <h4>summer</h4>
+                  <p> <span id="summer-break-start">Week 26</span></p>
+                  <p> <span id="summer-break-end">Week 35</span></p>
+                </div>
+          
+                <!-- Kerstvakantie -->
+                <div class="season">
+                  <h4>christmas</h4>
+                  <p> <span id="christmas-break-start">Week 51</span></p>
+                  <p> <span id="christmas-break-end">Week 1</span></p>
+                </div>
+          
+                <!-- Laagseizoen -->
+                <div class="season">
+                  <h4>low-season</h4>
+                  <p> <span id="low-season-start">Week 36</span></p>
+                  <p> <span id="low-season-end">Week 21</span></p>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+      <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FAmsterdam&showPrint=0&showTabs=0&showNav=0&showCalendars=0&mode=WEEK&title&src=c3lsdmFpbkBvc21vY29yZS5ubA&color=%23039BE5" style="border: 0"></iframe>
+    </div>
+</div>
 
   <section class="contact-form">
     <h5>Neem contact met ons op</h5>
@@ -141,133 +197,292 @@
       const languageMenu = document.querySelector(".language-menu");
       languageMenu.classList.toggle("active");
     }
-  
-    function changeLanguage(lang = "nl") {
-  const elements = {
-    nl: {
-      h1: "Welkom bij VakantiehuisdeVoetjes!",
-      h2: "Over Ons Vakantiehuisje",
-      h3: "Beschrijving",
-      h4: "Aanvullende Info",
-      h5: "Neem contact met ons op",  // Vertaling toegevoegd
-      h6: "Waar te vinden?",  // Vertaling toegevoegd
-      beschrijving: "Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!",
-      tarieven: "Tarieven Vakantiehuisje",
-      aanvullendeInfo: "Aanvullende Info:",
-      contactOp: "Neem contact met ons op",
-      contactDetails: "Contact Gegevens",
-      prijsButton: "Bel voor boeking",
-      prijsWeekend: "Weekend (2 nachten)",
-      prijsMidweek: "Midweek (4 nachten)",
-      prijsWeek: "Week (7 nachten)",
-      aanwezig: "Aanwezig",
-      lijstAanwezig: [
-        "4 Persoons Huisje",
-        "2 slaapkamers met ieder eigen badkamer",
-        "2x toilet",
-        "2x douche",
-        "Volledig uitgeruste keuken",
-        "Gratis Wi-Fi en TV",
-        "Terras en aangelegde tuin",
-        "Parkeerplaats met laadpaal beschikbaar",
-      ],
-      p2: "Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid)."
-    },
-    en: {
-      h1: "Welcome to HolidayHomeDeVoetjes!",
-      h2: "About Our Holiday Home",
-      h3: "Description",
-      h4: "Additional Info",
-      h5: "Contact Us",  // Vertaling toegevoegd
-      h6: "Where to Find Us?",  // Vertaling toegevoegd
-      beschrijving: "Our cozy holiday home is located in a beautiful, natural setting. It is perfect for those seeking peace and adventure!",
-      tarieven: "Rates for Holiday Home",
-      aanvullendeInfo: "Additional Info:",
-      contactOp: "Contact Us",
-      contactDetails: "Contact Details",
-      prijsButton: "Call to Book",
-      prijsWeekend: "Weekend (2 nights)",
-      prijsMidweek: "Midweek (4 nights)",
-      prijsWeek: "Week (7 nights)",
-      aanwezig: "Available",
-      lijstAanwezig: [
-        "4 Person Cottage",
-        "2 bedrooms with private bathroom",
-        "2x toilet",
-        "2x shower",
-        "Fully equipped kitchen",
-        "Free Wi-Fi and TV",
-        "Terrace and landscaped garden",
-        "Parking with charging station available",
-      ],
-      p2: "Additionally, all rooms are equipped with underfloor heating (underfloor cooling in summer). A sauna will be added to the first floor (expected to be completed by summer)."
-    },
-    de: {
-      h1: "Willkommen bei FerienhausdeVoetjes!",
-      h2: "Über Unser Ferienhaus",
-      h3: "Beschreibung",
-      h4: "Zusätzliche Informationen",
-      h5: "Kontaktieren Sie uns",  // Vertaling toegevoegd
-      h6: "Wo zu finden?",  // Vertaling toegevoegd
-      beschrijving: "Unser gemütliches Ferienhaus liegt in einer wunderschönen, natürlichen Umgebung. Es ist perfekt für Ruhe- und Abenteuerliebhaber!",
-      tarieven: "Preise für das Ferienhaus",
-      aanvullendeInfo: "Zusätzliche Informationen:",
-      contactOp: "Kontaktieren Sie uns",
-      contactDetails: "Kontaktdaten",
-      prijsButton: "Anrufen für Buchung",
-      prijsWeekend: "Wochenende (2 Nächte)",
-      prijsMidweek: "Midweek (4 Nächte)",
-      prijsWeek: "Woche (7 Nächte)",
-      aanwezig: "Verfügbar",
-      lijstAanwezig: [
-        "4 Personen Ferienhaus",
-        "2 Schlafzimmer mit eigenem Bad",
-        "2x Toilette",
-        "2x Dusche",
-        "Voll ausgestattete Küche",
-        "Kostenloses WLAN und TV",
-        "Terrasse und angelegter Garten",
-        "Parkplatz mit Ladeanschluss verfügbar",
-      ],
-      p2: "Zusätzlich sind alle Räume mit Fußbodenheizung ausgestattet (im Sommer Fußboden-Kühlung). Ein Sauna wird im ersten Stock hinzugefügt (Voraussichtlich bis Sommer fertig)."
-    },
-  };
 
-  // Update de tekst op de pagina
-  document.querySelector("h1").textContent = elements[lang].h1;
-  document.querySelector("h2").textContent = elements[lang].h2;
-  document.querySelector("h3").textContent = elements[lang].h3;
-  document.querySelector("h4").textContent = elements[lang].h4;
-  document.querySelector("h5").textContent = elements[lang].h5;  // Update h5
-  document.querySelector("h6").textContent = elements[lang].h6;  // Update h6
+    function changeLanguage(lang = "nl") {
+      const elements = {
+        nl: {
+          h1: "Welkom bij VakantiehuisdeVoetjes!",
+          h2: "Over Ons Vakantiehuisje",
+          h3: "Beschrijving",
+          h4: "Aanvullende Info",
+          h5: "Neem contact met ons op",
+          h6: "Waar te vinden?",
+          high_season: "Hoogseizoen",
+          low_season: "Laagseizoen",
+          beschrijving: "Ons gezellige vakantiehuisje ligt in een prachtige, natuurlijke omgeving. Het is perfect voor rustzoekers en avonturiers!",
+          tarieven: "Tarieven Vakantiehuisje",
+          aanvullendeInfo: "Aanvullende Info:",
+          prijsButton: "Bel voor boeking",
+          prijzen: {
+            hoogseizoen: {
+              weekend: "Weekend (2 nachten): €249,-",
+              midweek: "Midweek (4 nachten): €399,-",
+              week: "Week (7 nachten): €699,-"
+            },
+            laagseizoen: {
+              weekend: "Weekend (2 nachten): €199,-",
+              midweek: "Midweek (4 nachten): €349,-",
+              week: "Week (7 nachten): €599,-"
+            }
+          },
+          aanwezig: [
+            "4 Persoons Huisje",
+            "2 slaapkamers met ieder eigen badkamer",
+            "2x toilet",
+            "2x douche",
+            "Volledig uitgeruste keuken",
+            "Gratis Wi-Fi en TV",
+            "Terras en aangelegde tuin",
+            "Parkeerplaats met laadpaal beschikbaar"
+          ],
+          p2: "Daarnaast zijn alle ruimtes voorzien van vloerverwarming (in de zomer vloerverkoeling). Op de 1e verdieping komt er een sauna (verwacht voor de zomer te zijn voltooid).",
+     // Seizoensdata
+seasonDates: {
+  title: "Seizoensdata",
+  highSeason: {
+    title: "Hoogseizoen",
+    start: "Startweek: 22",
+    end: "Eindweek: 35"
+  },
+  springBreak: {
+    title: "Voorjaarsvakantie",
+    start: "Startweek: 7",
+    end: "Eindweek: 8"
+  },
+  summerBreak: {
+    title: "Zomervakantie",
+    start: "Startweek: 26",
+    end: "Eindweek: 35"
+  },
+  christmasBreak: {
+    title: "Kerstvakantie",
+    start: "Startweek: 51",
+    end: "Eindweek: 1"
+  },
+  lowSeason: {
+    title: "Laagseizoen",
+    start: "Startweek: 36",
+    end: "Eindweek: 21"
+  }
+}
+        },
+        en: {
+          h1: "Welcome to HolidayHomeDeVoetjes!",
+          h2: "About Our Holiday Home",
+          h3: "Description",
+          h4: "Additional Info",
+          h5: "Contact Us",
+          h6: "Where to Find Us?",
+          high_season: "High Season",
+          low_season: "Low Season",
+          beschrijving: "Our cozy holiday home is located in a beautiful, natural setting. It is perfect for those seeking peace and adventure!",
+          tarieven: "Rates for Holiday Home",
+          aanvullendeInfo: "Additional Info:",
+          p2: "Additionally, all rooms are equipped with underfloor heating (underfloor cooling in summer). A sauna will be added to the first floor (expected to be completed by summer).",
+          prijsButton: "Call to Book",
+          prijzen: {
+            hoogseizoen: {
+              weekend: "Weekend (2 nights): €249,-",
+              midweek: "Midweek (4 nights): €399,-",
+              week: "Week (7 nights): €699,-"
+            },
+            laagseizoen: {
+              weekend: "Weekend (2 nights): €199,-",
+              midweek: "Midweek (4 nights): €349,-",
+              week: "Week (7 nights): €599,-"
+            }
+          },
+          aanwezig: [
+            "4 Person Cottage",
+            "2 bedrooms, each with its own bathroom",
+            "2x toilet",
+            "2x shower",
+            "Fully equipped kitchen",
+            "Free Wi-Fi and TV",
+            "Terrace and landscaped garden",
+            "Parking space with charging station available"
+          ],
+          p2: "Additionally, all rooms are equipped with underfloor heating (underfloor cooling in summer). A sauna will be added to the first floor (expected to be completed by summer).",
+          
+          seasonDates: {
+            title: "Season Dates",
+            highSeason: {
+              title: "High Season",
+              start: "Start Date: June 1",
+              end: "End Date: August 31"
+            },
+            springBreak: {
+              title: "Spring Break",
+              start: "Start Date: February 15",
+              end: "End Date: February 21"
+            },
+            summerBreak: {
+              title: "Summer Break",
+              start: "Start Date: July 1",
+              end: "End Date: August 31"
+            },
+            christmasBreak: {
+              title: "Christmas Break",
+              start: "Start Date: December 20",
+              end: "End Date: January 3"
+            },
+            lowSeason: {
+              title: "Low Season",
+              start: "Start Date: September 1",
+              end: "End Date: May 31"
+            }
+          }
+        },
+        de: {
+          h1: "Willkommen bei FerienhausdeVoetjes!",
+          h2: "Über Unser Ferienhaus",
+          h3: "Beschreibung",
+          h4: "Zusätzliche Informationen",
+          h5: "Kontaktieren Sie uns",
+          h6: "Wo zu finden?",
+          high_season: "Hochsaison",
+          low_season: "Nebensaison",
+          beschrijving: "Unser gemütliches Ferienhaus liegt in einer wunderschönen, natürlichen Umgebung. Es ist perfekt für Ruhe- und Abenteuerliebhaber!",
+          tarieven: "Preise für das Ferienhaus",
+          aanvullendeInfo: "Zusätzliche Informationen:",
+          prijsButton: "Anrufen für Buchung",
+          prijzen: {
+            hoogseizoen: {
+              weekend: "Wochenende (2 Nächte): €600,-",
+              midweek: "Wochenmitte (4 Nächte): €900,-",
+              week: "Woche (7 Nächte): €1200,-"
+            },
+            laagseizoen: {
+              weekend: "Wochenende (2 Nächte): €400,-",
+              midweek: "Wochenmitte (4 Nächte): €600,-",
+              week: "Woche (7 Nächte): €800,-"
+            }
+          },
+          aanwezig: [
+            "4-Personen-Ferienhaus",
+            "2 Schlafzimmer, jeweils mit eigenem Bad",
+            "2x Toilette",
+            "2x Dusche",
+            "Voll ausgestattete Küche",
+            "Kostenloses Wi-Fi und TV",
+            "Terrasse und angelegter Garten",
+            "Parkplatz mit Ladestation verfügbar"
+          ],
+          p2: "Zusätzlich sind alle Räume mit Fußbodenheizung ausgestattet (im Sommer Fußboden-Kühlung). Ein Sauna wird im ersten Stock hinzugefügt (Voraussichtlich bis Sommer fertig).",
+          // Seizoensdata
+          seasonDates: {
+            title: "Saisonzeiten",
+            highSeason: {
+              title: "Hochsaison",
+              start: "Startdatum: 1. Juni",
+              end: "Enddatum: 31. August"
+            },
+            springBreak: {
+              title: "Frühjahrsferien",
+              start: "Startdatum: 15. Februar",
+              end: "Enddatum: 21. Februar"
+            },
+            summerBreak: {
+              title: "Sommerferien",
+              start: "Startdatum: 1. Juli",
+              end: "Enddatum: 31. August"
+            },
+            christmasBreak: {
+              title: "Weihnachtsferien",
+              start: "Startdatum: 20. Dezember",
+              end: "Enddatum: 3. Januar"
+            },
+            lowSeason: {
+              title: "Nebensaison",
+              start: "Startdatum: 1. September",
+              end: "Enddatum: 31. Mai"
+            }
+          }
+        }
+      };
+
+
+      document.querySelector("h1").textContent = elements[lang].h1;
+  document.querySelector("#huisje-info h2").textContent = elements[lang].h2;
+  document.querySelector(".p-box h3").textContent = elements[lang].h3;
+  document.querySelector(".p-box h4").textContent = elements[lang].h4;
+  document.querySelector(".contact-form h5").textContent = elements[lang].h5;
+  document.querySelector("#location h6").textContent = elements[lang].h6;
+
+  document.querySelector("#high-season-title").textContent = elements[lang].high_season;
+  document.querySelector("#low-season-title").textContent = elements[lang].low_season;
+  
   document.querySelector(".p-box p").textContent = elements[lang].beschrijving;
+  document.querySelector(".p2").textContent = elements[lang].p2;
+
   document.querySelector(".price-title").textContent = elements[lang].tarieven;
   document.querySelector(".price-button").textContent = elements[lang].prijsButton;
 
-  // Update prijzen
-  const priceOptions = document.querySelectorAll(".price-option span");
-  priceOptions[0].textContent = elements[lang].prijsWeekend;
-  priceOptions[1].textContent = elements[lang].prijsMidweek;
-  priceOptions[2].textContent = elements[lang].prijsWeek;
+  document.querySelector("#weekend-high").textContent = elements[lang].prijzen.hoogseizoen.weekend;
+  document.querySelector("#midweek-high").textContent = elements[lang].prijzen.hoogseizoen.midweek;
+  document.querySelector("#week-high").textContent = elements[lang].prijzen.hoogseizoen.week;
 
-  // Update lijst van aanwezige voorzieningen
-  document.querySelector(".container h3").textContent = elements[lang].aanwezig;
-  const listItems = document.querySelectorAll(".container li");
-  elements[lang].lijstAanwezig.forEach((item, index) => {
-    listItems[index].textContent = item;
-  });
+  document.querySelector("#weekend-low").textContent = elements[lang].prijzen.laagseizoen.weekend;
+  document.querySelector("#midweek-low").textContent = elements[lang].prijzen.laagseizoen.midweek;
+  document.querySelector("#week-low").textContent = elements[lang].prijzen.laagseizoen.week;
 
-  // Update aanvullende info
-  document.querySelector(".p-box h4").textContent = elements[lang].aanvullendeInfo;
-  document.querySelector(".p2").textContent = elements[lang].p2;
+  const aanwezigUl = document.querySelector(".container ul");
+  aanwezigUl.innerHTML = `<h3>${elements[lang].h3}</h3>` + elements[lang].aanwezig.map(item => `<li>${item}</li>`).join("");
 
-  // Update contactinformatie
-  document.querySelector(".contact-info h3").textContent = elements[lang].contactDetails;
-  document.querySelector(".footer-container p").textContent = "© 2025 " + elements[lang].h1 + " Powered by osmocore";
+  document.querySelector(".season-dates h3").textContent = elements[lang].seasonDates.title;
+
+  document.querySelector("#high-season-start").textContent = elements[lang].seasonDates.highSeason.start;
+  document.querySelector("#high-season-end").textContent = elements[lang].seasonDates.highSeason.end;
+
+  document.querySelector("#spring-break-start").textContent = elements[lang].seasonDates.springBreak.start;
+  document.querySelector("#spring-break-end").textContent = elements[lang].seasonDates.springBreak.end;
+
+  document.querySelector("#summer-break-start").textContent = elements[lang].seasonDates.summerBreak.start;
+  document.querySelector("#summer-break-end").textContent = elements[lang].seasonDates.summerBreak.end;
+
+  document.querySelector("#christmas-break-start").textContent = elements[lang].seasonDates.christmasBreak.start;
+  document.querySelector("#christmas-break-end").textContent = elements[lang].seasonDates.christmasBreak.end;
+
+  document.querySelector("#low-season-start").textContent = elements[lang].seasonDates.lowSeason.start;
+  document.querySelector("#low-season-end").textContent = elements[lang].seasonDates.lowSeason.end;
 }
 
-// Zet standaardtaal in
-changeLanguage('nl');
-  </script>
+      // Update de tekst op de pagina
+      document.querySelector("h1").textContent = elements[lang].h1;
+      document.querySelector("h2").textContent = elements[lang].h2;
+      document.querySelector("h3").textContent = elements[lang].h3;
+      document.querySelector("h4").textContent = elements[lang].h4;
+      document.querySelector("h5").textContent = elements[lang].h5;
+      document.querySelector("h6").textContent = elements[lang].h6;
+      document.querySelector(".p-box p").textContent = elements[lang].beschrijving;
+      document.querySelector(".price-title").textContent = elements[lang].tarieven;
+      document.querySelector(".price-button").textContent = elements[lang].prijsButton;
+
+      // Update seizoen data
+      document.querySelector('.season-dates h3').textContent = elements[lang].seasonDates.title;
+      document.querySelector('.season:nth-of-type(1) h4').textContent = elements[lang].seasonDates.highSeason.title;
+      document.querySelector('#high-season-start').textContent = elements[lang].seasonDates.highSeason.start;
+      document.querySelector('#high-season-end').textContent = elements[lang].seasonDates.highSeason.end;
+
+      document.querySelector('.season:nth-of-type(2) h4').textContent = elements[lang].seasonDates.springBreak.title;
+      document.querySelector('#spring-break-start').textContent = elements[lang].seasonDates.springBreak.start;
+      document.querySelector('#spring-break-end').textContent = elements[lang].seasonDates.springBreak.end;
+
+      document.querySelector('.season:nth-of-type(3) h4').textContent = elements[lang].seasonDates.summerBreak.title;
+      document.querySelector('#summer-break-start').textContent = elements[lang].seasonDates.summerBreak.start;
+      document.querySelector('#summer-break-end').textContent = elements[lang].seasonDates.summerBreak.end;
+
+      document.querySelector('.season:nth-of-type(4) h4').textContent = elements[lang].seasonDates.christmasBreak.title;
+      document.querySelector('#christmas-break-start').textContent = elements[lang].seasonDates.christmasBreak.start;
+      document.querySelector('#christmas-break-end').textContent = elements[lang].seasonDates.christmasBreak.end;
+
+      document.querySelector('.season:nth-of-type(5) h4').textContent = elements[lang].seasonDates.lowSeason.title;
+      document.querySelector('#low-season-start').textContent = elements[lang].seasonDates.lowSeason.start;
+      document.querySelector('#low-season-end').textContent = elements[lang].seasonDates.lowSeason.end;
+    
+
+    // Zet standaardtaal in
+    changeLanguage('nl');
+</script>
 </body>
 </html>
