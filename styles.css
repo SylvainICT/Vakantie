@@ -807,20 +807,7 @@ footer p {
     background: rgba(255, 255, 255, 0.1); /* Subtiele hover-effect */
 }
 
-/* 📱 Mobiel: Plaats de knop onder h1 */
-@media (max-width: 768px) {
-    .language-container {
-        position: relative;
-        display: block;
-        text-align: center;
-        margin-top: 5px;
-    }
 
-    .language-button {
-        width: auto;
-        display: inline-block;
-    }
-}
 
 h5, h6 {
     font-size: 28px; /* Dit is dezelfde grootte als h2 */
@@ -879,7 +866,7 @@ h5, h6 {
 }
 @media (max-width: 600px) {
     .season-dates {
-        width: 90%;
+        width: 80%;
         padding: 15px;
         font-size: 0.9rem;
         border-radius: 10px;
