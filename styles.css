@@ -633,10 +633,12 @@ footer p {
 
 .prev {
     left: 10px; /* Plaats de vorige knop aan de linkerzijde */
+    z-index: 0;
 }
 
 .next {
     right: 10px; /* Plaats de volgende knop aan de rechterzijde */
+    z-index: 0;
 }
 
 /* Stijl voor de navigatie dots */
