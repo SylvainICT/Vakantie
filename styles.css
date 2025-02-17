@@ -104,7 +104,7 @@ header h1 {
     height: 100%; /* Volledige hoogte van het scherm */
     background-color: #333; /* Donkere achtergrond voor het menu */
     transition: left 0.3s ease-in-out; /* Soepele overgang voor het schuiven */
-    z-index: 20; /* Zet het menu bovenop het logo en andere elementen */
+    z-index: 2000; /* Zet het menu bovenop het logo en andere elementen */
 }
 
 .nav-links {
