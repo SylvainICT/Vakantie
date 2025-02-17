@@ -134,6 +134,7 @@ header h1 {
 /* Menu zichtbaar wanneer geactiveerd */
 .navbar.active {
     left: 0; /* Menu schuift in zicht */
+    z-index: 2000;
 }
 
 /* ==========================
@@ -633,12 +634,12 @@ footer p {
 
 .prev {
     left: 10px; /* Plaats de vorige knop aan de linkerzijde */
-    z-index: 0;
+  
 }
 
 .next {
     right: 10px; /* Plaats de volgende knop aan de rechterzijde */
-    z-index: 0;
+   
 }
 
 /* Stijl voor de navigatie dots */
