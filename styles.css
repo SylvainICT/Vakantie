@@ -174,7 +174,7 @@ header h1 {
 
 .contact-form input, 
 .contact-form textarea {
-    width: 100%;
+    width: 80%;
     padding: 15px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -503,7 +503,7 @@ footer p {
 
 @media (max-width: 600px) {
     .price-box {
-        width: 90%; /* Zorg ervoor dat de box kleiner is op mobiele schermen */
+        width: 80%; /* Zorg ervoor dat de box kleiner is op mobiele schermen */
         padding: 15px; /* Minder padding voor kleinere schermen */
         font-size: 0.9rem; /* Kleinere tekst op mobiele apparaten */
         border-radius: 10px; /* Iets kleinere hoeken */
@@ -718,7 +718,7 @@ footer p {
   
   .about-content {
     width: 60%;
-    font-family: Arial, sans-serif;
+    font-family: 'FangSong';
     line-height: 1.6;
     position: relative;
     z-index: 1; /* Zorgt ervoor dat de tekst voor de afbeelding komt */

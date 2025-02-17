@@ -125,28 +125,28 @@
             <div class="season-container">
                 <div class="season-dates">
                     <h3 id="season-title">Seizoensdata</h3>
-    
+        
                     <!-- Voorjaarsvakantie -->
                     <div class="season">
                         <h4 id="spring-title">Voorjaarsvakantie</h4>
                         <p><span id="spring-break-start">Week 7</span></p>
                         <p><span id="spring-break-end">Week 8</span></p>
                     </div>
-    
+        
                     <!-- Zomervakantie -->
                     <div class="season">
                         <h4 id="summer-title">Zomervakantie</h4>
                         <p><span id="summer-break-start">Week 26</span></p>
                         <p><span id="summer-break-end">Week 35</span></p>
                     </div>
-    
+        
                     <!-- Kerstvakantie -->
                     <div class="season">
                         <h4 id="christmasBreak">Kerstvakantie</h4>
                         <p><span id="christmas-break-start">Week 51</span></p>
                         <p><span id="christmas-break-end">Week 1</span></p>
                     </div>
-    
+        
                     <!-- Laagseizoen -->
                     <div class="season">
                         <h4 id="low-season-title">Laagseizoen</h4>
@@ -453,23 +453,25 @@ seasonDates: {
 
   const aanwezigUl = document.querySelector(".container ul");
   aanwezigUl.innerHTML = `<h3>${elements[lang].h3}</h3>` + elements[lang].aanwezig.map(item => `<li>${item}</li>`).join("");
+    // Seizoensdata
+    document.querySelector("#season-title").textContent = elements[lang].seasonDates.title;
 
-  document.querySelector(".season-dates h3").textContent = elements[lang].seasonDates.title;
+document.querySelector("#spring-title").textContent = elements[lang].seasonDates.springBreak.title;
+document.querySelector("#spring-break-start").textContent = elements[lang].seasonDates.springBreak.start;
+document.querySelector("#spring-break-end").textContent = elements[lang].seasonDates.springBreak.end;
 
-  document.querySelector("#high-season-start").textContent = elements[lang].seasonDates.highSeason.start;
-  document.querySelector("#high-season-end").textContent = elements[lang].seasonDates.highSeason.end;
+document.querySelector("#summer-title").textContent = elements[lang].seasonDates.summerBreak.title;
+document.querySelector("#summer-break-start").textContent = elements[lang].seasonDates.summerBreak.start;
+document.querySelector("#summer-break-end").textContent = elements[lang].seasonDates.summerBreak.end;
 
-  document.querySelector("#spring-break-start").textContent = elements[lang].seasonDates.springBreak.start;
-  document.querySelector("#spring-break-end").textContent = elements[lang].seasonDates.springBreak.end;
+document.querySelector("#christmasBreak").textContent = elements[lang].seasonDates.christmasBreak.title;
+document.querySelector("#christmas-break-start").textContent = elements[lang].seasonDates.christmasBreak.start;
+document.querySelector("#christmas-break-end").textContent = elements[lang].seasonDates.christmasBreak.end;
 
-  document.querySelector("#summer-break-start").textContent = elements[lang].seasonDates.summerBreak.start;
-  document.querySelector("#summer-break-end").textContent = elements[lang].seasonDates.summerBreak.end;
+document.querySelector("#low-season-title").textContent = elements[lang].seasonDates.lowSeason.title;
+document.querySelector("#low-season-start").textContent = elements[lang].seasonDates.lowSeason.start;
+document.querySelector("#low-season-end").textContent = elements[lang].seasonDates.lowSeason.end;
 
-  document.querySelector("#christmas-break-start").textContent = elements[lang].seasonDates.christmasBreak.start;
-  document.querySelector("#christmas-break-end").textContent = elements[lang].seasonDates.christmasBreak.end;
-
-  document.querySelector("#low-season-start").textContent = elements[lang].seasonDates.lowSeason.start;
-  document.querySelector("#low-season-end").textContent = elements[lang].seasonDates.lowSeason.end;
 }
 
       // Update de tekst op de pagina
@@ -483,19 +485,7 @@ seasonDates: {
       document.querySelector(".price-title").textContent = elements[lang].tarieven;
       document.querySelector(".price-button").textContent = elements[lang].prijsButton;
 
-      
-      document.querySelector('.season:nth-of-type(3) h4').textContent = elements[lang].seasonDates.summerBreak.title;
-      document.querySelector('#summer-break-start').textContent = elements[lang].seasonDates.summerBreak.start;
-      document.querySelector('#summer-break-end').textContent = elements[lang].seasonDates.summerBreak.end;
-
-      document.querySelector('.season:nth-of-type(4) h4').textContent = elements[lang].seasonDates.christmasBreak.title;
-      document.querySelector('#christmas-break-start').textContent = elements[lang].seasonDates.christmasBreak.start;
-      document.querySelector('#christmas-break-end').textContent = elements[lang].seasonDates.christmasBreak.end;
-
-      document.querySelector('.season:nth-of-type(5) h4').textContent = elements[lang].seasonDates.lowSeason.title;
-      document.querySelector('#low-season-start').textContent = elements[lang].seasonDates.lowSeason.start;
-      document.querySelector('#low-season-end').textContent = elements[lang].seasonDates.lowSeason.end;
-    
+     
 
     // Zet standaardtaal in
     changeLanguage('nl');

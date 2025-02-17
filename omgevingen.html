@@ -18,7 +18,7 @@
     <header>
         <img src="fotos/OsmoCore-1.jpg" alt="site-logo" class="site-logo"> <!-- Voeg hier je logo-afbeelding toe -->
         <h1>Wat Te Doen in Schoorl</h1>
-        <p>Verken de natuur en ontdek spannende activiteiten tijdens je verblijf in ons vakantiehuis in Schoorl!</p>
+        <p></p>
     </header>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <!-- Navigatie menu (aanvankelijk verborgen) -->
@@ -27,15 +27,23 @@
         <div class="close-btn" onclick="closeMenu()">×</div>
         <ul id="nav-links" class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="omgevingen.html">Environment</a></li>
+            <li><a href="over.html">Environment</a></li>
         </ul>
     </nav>
+    <div class="language-container">
+        <button class="language-button" onclick="toggleLanguageMenu()">🌍 Taal</button>
+        <ul class="language-menu">
+            <li onclick="changeLanguage('nl')">🇳🇱 Nederlands</li>
+            <li onclick="changeLanguage('en')">🇬🇧 English</li>
+            <li onclick="changeLanguage('de')">🇩🇪 Deutsch</li>
+        </ul>
+    </div>
 </header>
 
     <!-- Activiteiten in de Omgeving -->
     <section class="activities-section">
         <h2>Ontdek de Activiteiten in Schoorl</h2>
-        <p>Van het beroemde Klimduin tot de uitgestrekte Schoorlse Duinen, hier zijn enkele topactiviteiten in de regio rondom ons vakantiehuisje.</p>
+        <p class="p1">Van het beroemde Klimduin tot de uitgestrekte Schoorlse Duinen, hier zijn enkele topactiviteiten in de regio rondom ons vakantiehuisje.</p>
 
         <div class="activities-grid">
             <div class="activity-card">
@@ -74,14 +82,7 @@
                 </div>
             </div>
 
-            <div class="activity-card">
-                <img src="omgeving/speelbos.jpg" alt="Speelbos Zandspoor">
-                <div class="activity-info">
-                    <h3>Speelbos Zandspoor</h3>
-                    <p>Een avontuurlijk speelbos voor kinderen met zand, water en natuurlijke speelelementen.</p>
-                    <a href="https://www.dagjeweg.nl/dagjeuit/schoorl" class="activity-button" target="_blank">Meer Informatie</a>
-                </div>
-            </div>
+           
 
             <div class="activity-card">
                 <img src="omgeving/mountenbike.jpg" alt="MTB Parcours Schoorl">
@@ -97,7 +98,7 @@
                 <div class="activity-info">
                     <h3>Watersport bij DJUS Camperduin</h3>
                     <p>Leer suppen, surfen of kajakken bij DJUS Camperduin en ontdek de wateren rondom Schoorl.</p>
-                    <a href="https://kampeerterreinbuitenduin.nl/wat-te-doen-in-schoorl/sportieve-activiteiten-in-schoorl/" class="activity-button" target="_blank">Meer Informatie</a>
+                    <a href="https://djus.nl/" class="activity-button" target="_blank">Meer Informatie</a>
                 </div>
             </div>
         </div>
@@ -120,6 +121,78 @@
             </div>
           </div>
         </footer>
+<script>
+ function toggleLanguageMenu() {
+      const languageMenu = document.querySelector(".language-menu");
+      languageMenu.classList.toggle("active");
+    }
+    const translations = {
+    nl: {
+        title: "Wat te Doen in Schoorl | Vakantiehuis Activiteiten",
+        header: "Wat Te Doen in Schoorl",
+        subtitle: "",
+        activities: "Ontdek de Activiteiten in Schoorl",
+        activitiesSectionDescription: "Van het beroemde Klimduin tot de uitgestrekte Schoorlse Duinen, hier zijn enkele topactiviteiten in de regio rondom ons vakantiehuisje.",
+        activity1: "Het hoogste duin van Nederland, ideaal voor kinderen en volwassenen om naar beneden te rennen en te spelen.",
+        activity2: "Verken het grootste aaneengesloten duingebied van Nederland met diverse wandel- en fietsroutes.",
+        activity3: "Geniet van zon, zee en strand bij het rustige strand van Camperduin, ideaal voor een ontspannen dag.",
+        activity4: "Start je avontuur met een bezoek aan het Buitencentrum voor informatie, tentoonstellingen en activiteiten.",
+        activity5: "Voor de mountainbikeliefhebbers: uitdagende parcoursen door de duinen en bossen van Schoorl.",
+        activity6: "Leer suppen, surfen of kajakken bij DJUS Camperduin en ontdek de wateren rondom Schoorl."
+       
+    },
+    en: {
+        title: "Things to Do in Schoorl | Holiday Home Activities",
+        header: "Things to Do in Schoorl",
+        subtitle: "",
+        activities: "Discover Activities in Schoorl",
+        activitiesSectionDescription: "From the famous Climbing Dune to the expansive Schoorl Dunes, here are some top activities in the area surrounding our holiday home.",
+        activity1: "The highest dune in the Netherlands, perfect for kids and adults to run down and play.",
+        activity2: "Explore the largest continuous dune area in the Netherlands with various hiking and cycling routes.",
+        activity3: "Enjoy sun, sea, and beach at the quiet Camperduin beach, ideal for a relaxing day.",
+        activity4: "Start your adventure with a visit to the Visitor Center for information, exhibitions, and activities.",
+        activity5: "For mountain biking enthusiasts: challenging trails through the dunes and forests of Schoorl.",
+        activity6: "Learn to paddleboard, surf, or kayak at DJUS Camperduin and explore the waters around Schoorl."
+    },
+    de: {
+        title: "Was gibt es in Schoorl zu tun | Ferienhaus-Aktivitäten",
+        header: "Was gibt es in Schoorl zu tun",
+        subtitle: "",
+        activities: "Entdecken Sie Aktivitäten in Schoorl",
+        activitiesSectionDescription: "Vom berühmten Kletterdünen bis zu den weiten Schoorler Dünen, hier sind einige Top-Aktivitäten in der Umgebung unseres Ferienhauses.",
+        activity1: "Die höchste Düne der Niederlande, ideal für Kinder und Erwachsene zum Herunterrennen und Spielen.",
+        activity2: "Erkunden Sie das größte zusammenhängende Dünengebiet der Niederlande mit verschiedenen Wander- und Radwegen.",
+        activity3: "Genießen Sie Sonne, Meer und Strand am ruhigen Strand von Camperduin, ideal für einen entspannten Tag.",
+        activity4: "Beginnen Sie Ihr Abenteuer mit einem Besuch im Besucherzentrum für Informationen, Ausstellungen und Aktivitäten.",
+        activity5: "Für Mountainbike-Fans: Herausfordernde Strecken durch die Dünen und Wälder von Schoorl.",
+        activity6: "Lernen Sie Stand-up-Paddling, Surfen oder Kajakfahren bei DJUS Camperduin und erkunden Sie die Gewässer rund um Schoorl."
+    }
+};
 
+function changeLanguage(lang) {
+    if (!translations[lang]) return;
+
+    document.title = translations[lang].title;
+    document.querySelector("h1").textContent = translations[lang].header;
+    document.querySelector("header p").textContent = translations[lang].subtitle;
+    document.querySelector(".activities-section h2").textContent = translations[lang].activities;
+
+    const activityDescriptions = document.querySelectorAll(".activity-info p");
+    activityDescriptions[0].textContent = translations[lang].activity1;
+    activityDescriptions[1].textContent = translations[lang].activity2;
+    activityDescriptions[2].textContent = translations[lang].activity3;
+    activityDescriptions[3].textContent = translations[lang].activity4;
+    activityDescriptions[4].textContent = translations[lang].activity5;
+    activityDescriptions[5].textContent = translations[lang].activity6;
+    document.querySelector(".p1").textContent = translations[lang].activitiesSectionDescription;
+    localStorage.setItem("language", lang);
+}
+
+// Stel de opgeslagen taal in bij het laden van de pagina
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("language") || "nl";
+    changeLanguage(savedLang);
+});
+</script>
 </body>
 </html>
