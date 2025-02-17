@@ -49,6 +49,7 @@ nav select {
     font-family: 'FangSong';
 }
 
+
 header h1 {
     font-family: 'FangSong';
     font-size: 2rem;
@@ -338,7 +339,7 @@ footer p {
    ========================== */
 @media (max-width: 600px) {
     header {
-        height: 60vh;
+        height: 20vh;
         padding: 20px;
     }
 
@@ -690,7 +691,6 @@ footer p {
       left: 10px;
     }
   }
-
   .about-us {
     display: flex;
     flex-direction: column; /* Zorgt ervoor dat de afbeelding boven de tekst komt */
@@ -741,7 +741,7 @@ footer p {
   
   .about-content strong {
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
   }
   
   .about-image {
@@ -750,21 +750,22 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
-    margin-top: 10px; /* Zorgt ervoor dat er ruimte boven de afbeelding is */
-    margin-bottom: 5px; /* Ruimte onder de afbeelding */
+    margin-top: 20px; /* Zorgt ervoor dat er ruimte boven de afbeelding is */
+    margin-bottom: 20px; /* Ruimte onder de afbeelding */
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Mooiere schaduw voor de afbeelding */
   }
   
   .about-image img {
-    width: 100%;
+    width: 100%; /* Zorgt ervoor dat de afbeelding de container vult */
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet groter wordt dan de container */
     height: auto;
     border-radius: 10px; /* Geef de afbeelding afgeronde hoeken */
     object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt bijgesneden */
   }
+  
   /* Media Query voor kleinere schermen zoals mobiel */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .about-us {
       padding: 30px;
       flex-direction: column;
@@ -777,18 +778,18 @@ footer p {
     }
   
     .about-image {
-      width: 90%;
-      max-width: none;
+      width: 100%; /* Zet de afbeelding op 100% van de breedte op mobiel */
+      max-width: 100%; /* Beperk de afbeelding tot 100% van de container */
       margin-bottom: 20px;
     }
   
     .about-image img {
       width: 100%;
+      max-width: 100%;
+      height: auto;
       border-radius: 10px;
     }
   }
- 
-
   .language-container {
     position: absolute;
     top: 19px; /* Zorg dat dit een geldige waarde heeft */
