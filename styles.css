@@ -174,7 +174,7 @@ header h1 {
 
 .contact-form input, 
 .contact-form textarea {
-    width: 80%;
+    width: 90%;
     padding: 15px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -691,17 +691,18 @@ footer p {
     }
   }
 
-
   .about-us {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column; /* Zorgt ervoor dat de afbeelding boven de tekst komt */
+    justify-content: center;
+    align-items: center; /* Centreert zowel tekst als afbeelding */
     padding: 50px;
-    background-color: linear-gradient(to right, #729fff, #fcd874); /* Pas de kleur hier aan */
+    background: linear-gradient(to right, #729fff, #fcd874);
     border-radius: 8px;
     margin: 20px 0;
     position: relative;
-    overflow: hidden; /* Zorgt ervoor dat de afbeelding niet buiten het element komt */
+    text-align: center; /* Zorgt ervoor dat de tekst in het midden komt */
+    height: auto;
   }
   
   .about-us::before {
@@ -711,55 +712,81 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparante overlay voor de blur */
-    backdrop-filter: blur(10px); /* Het blur-effect */
-    z-index: -1; /* Zorgt ervoor dat de overlay achter de inhoud komt */
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
   }
   
   .about-content {
-    width: 60%;
+    width: 80%; /* Zorgt ervoor dat de tekst niet te breed is */
     font-family: 'FangSong';
     line-height: 1.6;
     position: relative;
-    z-index: 1; /* Zorgt ervoor dat de tekst voor de afbeelding komt */
+    z-index: 1;
+    margin-top: 20px;
+    text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
   }
   
   .about-content h2 {
     color: #2c3e50;
-    font-size: 2em;
+    font-size: 2.5em; /* Grotere koptekst voor visuele impact */
     margin-bottom: 20px;
   }
   
   .about-content p {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Iets groter voor leesbaarheid */
     color: #34495e;
     margin-bottom: 15px;
   }
   
   .about-content strong {
     font-weight: bold;
-    color: #e67e22;
+    color: #000000;
   }
   
   .about-image {
-    width: 35%;
+    width: 80%; /* Zet de afbeelding op 80% van de breedte */
+    max-width: 600px; /* Beperk de breedte tot 600px */
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 0; /* Zorgt ervoor dat de afbeelding achter de tekst komt */
+    margin-left: 30%;
+    margin-top: 10px; /* Zorgt ervoor dat er ruimte boven de afbeelding is */
+    margin-bottom: 5px; /* Ruimte onder de afbeelding */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Mooiere schaduw voor de afbeelding */
   }
   
   .about-image img {
-    width: 120%; /* Vergroot de afbeelding */
-    max-width: none;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover; /* Zorgt ervoor dat de afbeelding goed wordt bijgesneden */
+    border-radius: 10px; /* Geef de afbeelding afgeronde hoeken */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt bijgesneden */
+  }
+  
+  /* Media Query voor kleinere schermen zoals mobiel */
+  @media (max-width: 768px) {
+    .about-us {
+      padding: 30px;
+      flex-direction: column;
+      text-align: center; /* Zorg ervoor dat de tekst ook op mobiel gecentreerd is */
+    }
+  
+    .about-content {
+      width: 90%; /* Zorg ervoor dat de tekst nog steeds mooi past op mobiel */
+      margin-bottom: 20px;
+    }
+  
+    .about-image {
+      width: 90%;
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
   }
 
   .language-container {
