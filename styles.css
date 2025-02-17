@@ -764,30 +764,7 @@ footer p {
     object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt bijgesneden */
   }
   
- /* Media Query voor kleinere schermen zoals mobiel */
-@media (max-width: 768px) {
-  .about-us {
-    padding: 30px;
-    flex-direction: column;
-    text-align: center; /* Zorg ervoor dat de tekst ook op mobiel gecentreerd is */
-  }
-
-  .about-content {
-    width: 90%; /* Zorg ervoor dat de tekst nog steeds mooi past op mobiel */
-    margin-bottom: 20px;
-  }
-
-  .about-image {
-    width: 90%;
-    max-width: none;
-    margin-bottom: 20px;
-  }
-
-  .about-image img {
-    width: 100%;
-    border-radius: 10px;
-  }
-}
+ 
 
   .language-container {
     position: absolute;
@@ -959,4 +936,4 @@ h5, h6 {
     padding: 20px;
 
     
-} 
+}
