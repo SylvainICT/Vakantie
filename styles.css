@@ -806,8 +806,8 @@ footer p {
 }
 
 .language-button {
-    background-color: #007bff;
-    color: white;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
     border: none; /* Zorg ervoor dat er geen rand is */
     padding: 10px 15px;
     font-size: 16px;
@@ -815,7 +815,13 @@ footer p {
     transition: background 0.3s ease;
  
 }
+.language-menu {
+    display: none;
+}
 
+.language-menu.active {
+    display: block;
+}
 .language-button:hover {
     background-color: #0056b3;
 }
