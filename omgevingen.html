@@ -10,26 +10,26 @@
     <title>Wat te Doen in Schoorl | Vakantiehuis Activiteiten</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
-    <link rel="icon" href="fotos/OsmoCore-1.jpg">
+    <link rel="icon" href="fotos/voetjes logo 2.jpg">
 </head>
 <body>
 
     <!-- Header met logo -->
     <header>
-        <img src="fotos/OsmoCore-1.jpg" alt="site-logo" class="site-logo"> <!-- Voeg hier je logo-afbeelding toe -->
+        <img src="fotos/voetjes logo 2.jpg" alt="site-logo" class="site-logo"> <!-- Voeg hier je logo-afbeelding toe -->
         <h1>Wat Te Doen in Schoorl</h1>
         <p></p>
     </header>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <!-- Navigatie menu (aanvankelijk verborgen) -->
-    <nav class="navbar">
-        <!-- Sluitknop -->
-        <div class="close-btn" onclick="closeMenu()">×</div>
-        <ul id="nav-links" class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="over.html">Environment</a></li>
-        </ul>
-    </nav>
+            <nav class="navbar">
+                <div class="close-btn" onclick="closeMenu()">×</div>
+                <ul id="nav-links" class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="over.html">About Us</a></li>
+                  <li><a href="omgevingen.html">Environments</a></li> 
+                </ul>
+              </nav>
     <div class="language-container">
         <button class="language-button" onclick="toggleLanguageMenu()">🌍 Taal</button>
         <ul class="language-menu">
@@ -106,21 +106,12 @@
 
     <footer>
         <div class="footer-container">
-            <!-- Klein logo aan de linkerzijde -->
-            <a href="https://www.osmocore.nl" target="_blank" class="footer-logo">
-              <img src="fotos/OsmoCore-1.jpg" alt="Jouw Logo" width="50" height="50">
-            </a>
-        
-            <p>&copy; 2025 Jouw Vakantiehuisje. Powerd by osmocore
-            </p>
-            
-            <div class="social-links">
-              <a href="https://www.facebook.com/jouwsite" target="_blank">Facebook</a>
-              <a href="https://www.instagram.com/jouwsite" target="_blank">Instagram</a>
-              <a href="https://www.twitter.com/jouwsite" target="_blank">Twitter</a>
-            </div>
-          </div>
-        </footer>
+          <a href="https://www.osmocore.nl" target="_blank" class="footer-logo">
+            <img src="fotos/OsmoCore-1.jpg" alt="Jouw Logo" width="50" height="50">
+          </a>
+          <p>&copy; 2025 VakantiehuisdeVoetjes. Powered by OsmoCore</p>
+        </div>
+      </footer>
 <script>
  function toggleLanguageMenu() {
       const languageMenu = document.querySelector(".language-menu");

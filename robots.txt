@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Allow: /over
+Allow: /omgeving
+Allow: / 
+
+Sitemap: https://vakantiehuisdevoetjes.osmocore.nl/sitemap.xml

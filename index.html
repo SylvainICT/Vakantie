@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">  
-  <script src="scripts.js"></script>
-  <title>Vakantiehuisdevoetjes</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vakantiehuis De Voetjes: Geniet van een ontspannen vakantie in ons prachtige vakantiehuis met adembenemend uitzicht en avontuurlijke omgeving. Boek nu!">
+    <meta name="keywords" content="vakantiehuis, vakantie, verhuur, natuur, avontuur, omgeving">
+    <meta name="author" content="osmocore">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="fotos/voetjes logo 2.jpg">
   <style>
   :root{
   font-family: 'FangSong';}
@@ -15,14 +19,15 @@
 
 
   <header>
-    <img src="fotos/OsmoCore-1.jpg" alt="Logo" class="site-logo">
-    <h1>Welkom bij VakantiehuisdeVoetjes!</h1>
+    <img src="fotos/voetjes logo 2.jpg" alt="Logo" class="site-logo">
+    <h1> VakantiehuisdeVoetjes!</h1>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav class="navbar">
       <div class="close-btn" onclick="closeMenu()">×</div>
       <ul id="nav-links" class="nav-links">
-        <li><a href="over.html">about us</a></li>
-        <li><a href="omgevingen.html">Omgeving</a></li> 
+        <li><a href="index.html">Home</a></li>
+        <li><a href="over.html">About Us</a></li>
+        <li><a href="omgevingen.html">Environments</a></li> 
       </ul>
     </nav>
 
@@ -92,13 +97,13 @@
           <h3 id="high-season-title">Hoogseizoen</h3>
           <div class="price-options">
             <div class="price-option">
-              <span id="weekend-high">Weekend (2 nachten): €249,-</span>
+              <span id="weekend-high">Weekend (2 nachten): €600,-</span>
             </div>
             <div class="price-option">
-              <span id="midweek-high">Midweek (4 nachten): €399,-</span>
+              <span id="midweek-high">Midweek (4 nachten): €900,-</span>
             </div>
             <div class="price-option">
-              <span id="week-high">Week (7 nachten): €699,-</span>
+              <span id="week-high">Week (7 nachten): €1200,-</span>
             </div>
           </div>
         </div>
@@ -107,13 +112,13 @@
           <h3 id="low-season-title">Laagseizoen</h3>
           <div class="price-options">
             <div class="price-option">
-              <span id="weekend-low">Weekend (2 nachten): €199,-</span>
+              <span id="weekend-low">Weekend (2 nachten): €400,-</span>
             </div>
             <div class="price-option">
-              <span id="midweek-low">Midweek (4 nachten): €349,-</span>
+              <span id="midweek-low">Midweek (4 nachten): €600,-</span>
             </div>
             <div class="price-option">
-              <span id="week-low">Week (7 nachten): €599,-</span>
+              <span id="week-low">Week (7 nachten): €800,-</span>
             </div>
           </div>
         </div>
@@ -147,12 +152,7 @@
                         <p><span id="christmas-break-end">Week 1</span></p>
                     </div>
         
-                    <!-- Laagseizoen -->
-                    <div class="season">
-                        <h4 id="low-season-title">Laagseizoen</h4>
-                        <p><span id="low-season-start">Week 36</span></p>
-                        <p><span id="low-season-end">Week 21</span></p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -192,15 +192,16 @@
       <a href="https://www.osmocore.nl" target="_blank" class="footer-logo">
         <img src="fotos/OsmoCore-1.jpg" alt="Jouw Logo" width="50" height="50">
       </a>
-      <p>&copy; 2025 Jouw Vakantiehuisje. Powered by osmocore</p>
+      <p>&copy; 2025 VakantiehuisdeVoetjes. Powered by OsmoCore</p>
     </div>
   </footer>
 
   <script>
-    function toggleLanguageMenu() {
-      const languageMenu = document.querySelector(".language-menu");
-      languageMenu.classList.toggle("active");
-    }
+   // Toggle de zichtbaarheid van het taalmenu
+function toggleLanguageMenu() {
+    const languageMenu = document.querySelector(".language-menu");
+    languageMenu.classList.toggle("active");
+}
 
     function changeLanguage(lang = "nl") {
       const elements = {
